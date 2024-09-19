@@ -32,11 +32,16 @@ namespace WSConvertisseur.Controllers
             return devise != null ? Ok(devise) : NotFound();
         }
 
-        // GET: DevisesController/Create
-        [HttpGet("create")]
-        public ActionResult Create()
+        // POST: DevisesController
+        [HttpPost()]
+        public ActionResult<Devise> Post([FromBody] Devise devise)
         {
-            return View();
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            devises.Add(devise);
+            return CreatedAtRoute("GetDevise", new { id = devise.Id }, devise);
         }
 
         // POST: DevisesController/Create
@@ -77,10 +82,20 @@ namespace WSConvertisseur.Controllers
         }
 
         // GET: DevisesController/Delete/5
-        [HttpGet("/delete/{id}")]
+        [HttpDelete("{id}", Name = "DeleteDevise")]
         public ActionResult Delete(int id)
         {
-            return View();
+            Devise? devise =
+                (from d in devises
+                 where d.Id == id
+                 select d).FirstOrDefault();
+            if (devise == null)
+            {
+                return NotFound();
+            }
+            devises.Remove(devise);
+            return Ok("La devise " + devise.ToString() + " à été supprimée.");
+                
         }
 
         // POST: DevisesController/Delete/5
