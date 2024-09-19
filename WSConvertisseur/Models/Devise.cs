@@ -2,35 +2,44 @@
 
 namespace WSConvertisseur.Models
 {
-	/// <summary>
-	/// Classe Devise, représentant un objet devise avec un id, un nom, un taux
-	/// </summary>
+    /// <summary>
+    /// Classe Devise, représentant un objet devise avec un id, un nom, un taux
+    /// </summary>
     public class Devise
     {
-		private int id;
+        private int id;
 
-		public int Id
-		{
-			get { return id; }
-			set { id = value; }
-		}
+        /// <summary>
+        /// Obtient ou définit l'identifiant de la devise.
+        /// </summary>
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
 
-		private string? nomDevise;
+        private string? nomDevise;
 
-		[Required]
-		public string? NomDevise
-		{
-			get { return nomDevise; }
-			set { nomDevise = value; }
-		}
+        /// <summary>
+        /// Obtient ou définit le nom de la devise.
+        /// </summary>
+        [Required]
+        public string? NomDevise
+        {
+            get { return nomDevise; }
+            set { nomDevise = value; }
+        }
 
-		private double taux;
+        private double taux;
 
-		public double Taux
-		{
-			get { return taux; }
-			set { taux = value; }
-		}
+        /// <summary>
+        /// Obtient ou définit le taux de la devise.
+        /// </summary>
+        public double Taux
+        {
+            get { return taux; }
+            set { taux = value; }
+        }
 
         public Devise(int id, string nomDevise, double taux)
         {
@@ -41,7 +50,7 @@ namespace WSConvertisseur.Models
 
         public Devise()
         {
-            
+
         }
 
     }
