@@ -1290,11 +1290,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp1\\ClientConvertisseurV1\\ClientConvertisseurV1\\ClientConvertisseurV1.csproj",
+      "projectUniqueName": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp1\\tp1\\ClientConvertisseurV1\\ClientConvertisseurV1\\ClientConvertisseurV1.csproj",
       "projectName": "ClientConvertisseurV1",
-      "projectPath": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp1\\ClientConvertisseurV1\\ClientConvertisseurV1\\ClientConvertisseurV1.csproj",
+      "projectPath": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp1\\tp1\\ClientConvertisseurV1\\ClientConvertisseurV1\\ClientConvertisseurV1.csproj",
       "packagesPath": "C:\\Users\\damie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp1\\ClientConvertisseurV1\\ClientConvertisseurV1\\obj\\",
+      "outputPath": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp1\\tp1\\ClientConvertisseurV1\\ClientConvertisseurV1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1380,7 +1380,7 @@
           },
           {
             "name": "Microsoft.Windows.SDK.NET.Ref",
-            "version": "[10.0.19041.34, 10.0.19041.34]"
+            "version": "[10.0.19041.38, 10.0.19041.38]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-arm64",
