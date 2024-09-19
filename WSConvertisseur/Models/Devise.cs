@@ -2,6 +2,9 @@
 
 namespace WSConvertisseur.Models
 {
+	/// <summary>
+	/// Classe Devise, représentant un objet devise avec un id, un nom, un taux
+	/// </summary>
     public class Devise
     {
 		private int id;

@@ -17,14 +17,23 @@ namespace WSConvertisseur.Controllers
             devises.Add(new Devise(3, "Yen", 120));
         }
 
-        // GET: DevisesController
+        /// <summary>
+        /// Retourne toutes les devises
+        /// </summary>
+        /// <returns>Liste de toutes les devises</returns>
         [HttpGet]
         public IEnumerable<Devise> GetAll()
         {
             return devises;
         }
 
-        // GET: DevisesController/Details/5
+        /// <summary>
+        /// Retourne la devise dont l'id est spécifié dans l'url. 
+        /// </summary>
+        /// <param name="id">ID de la devise</param>
+        /// <returns>Http Response</returns>
+        /// <response code="200">Devise trouvé</response>
+        /// <response code="404">Devise non trouvée</response>
         [HttpGet("{id}", Name = "GetDevise")]
         public ActionResult<Devise> GetById(int id)
         {
@@ -32,7 +41,13 @@ namespace WSConvertisseur.Controllers
             return devise != null ? Ok(devise) : NotFound();
         }
 
-        // POST: DevisesController
+        /// <summary>
+        /// Crée une nouvelle devise
+        /// </summary>
+        /// <param name="devise">Un objet Devise</param>
+        /// <returns>Http Response</returns>
+        /// <response code="201">Devise créée</response>
+        /// <response code="400">Mauvais format de requete</response>
         [HttpPost()]
         public ActionResult<Devise> Post([FromBody] Devise devise)
         {
@@ -44,31 +59,17 @@ namespace WSConvertisseur.Controllers
             return CreatedAtRoute("GetDevise", new { id = devise.Id }, devise);
         }
 
-        // POST: DevisesController/Create
-        [HttpPost("/create/{id}")]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: DevisesController/Edit/5
-        [HttpGet("/edit/{id}")]
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // PUT: DevisesController/5
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id">L'id de la devise à modifier</param>
+        /// <param name="devise">Un objet devise modifié</param>
+        /// <returns></returns>
+        /// <response code="204">Devise modifiée</response>
+        /// <response code="400">Mauvais format de requete</response>
+        /// <response code="404">Devise non trouvé</response>
         [HttpPut("{id}")]
-        public ActionResult Edit(int id, [FromBody] Devise devise)
+        public ActionResult Put(int id, [FromBody] Devise devise)
         {
             if (!ModelState.IsValid)
             {
@@ -87,7 +88,13 @@ namespace WSConvertisseur.Controllers
             return NoContent();
         }
 
-        // GET: DevisesController/Delete/5
+        /// <summary>
+        /// Supprime une devise
+        /// </summary>
+        /// <param name="id">L'id de la devise à supprimer</param>
+        /// <returns>Http Response</returns>
+        /// <response code="200">Devise supprimée</response>
+        /// <response code="404">Devise non trouvée</response>
         [HttpDelete("{id}", Name = "DeleteDevise")]
         public ActionResult Delete(int id)
         {
@@ -102,21 +109,6 @@ namespace WSConvertisseur.Controllers
             devises.Remove(devise);
             return Ok("La devise " + devise.ToString() + " à été supprimée.");
                 
-        }
-
-        // POST: DevisesController/Delete/5
-        [HttpPost("/delete/{id}")]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
         }
     }
 }
