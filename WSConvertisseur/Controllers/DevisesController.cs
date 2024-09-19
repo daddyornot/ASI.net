@@ -66,19 +66,25 @@ namespace WSConvertisseur.Controllers
             return View();
         }
 
-        // POST: DevisesController/Edit/5
-        [HttpPost("/edit/{id}")]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        // PUT: DevisesController/5
+        [HttpPut("{id}")]
+        public ActionResult Edit(int id, [FromBody] Devise devise)
         {
-            try
+            if (!ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Index));
+                return BadRequest(ModelState);
             }
-            catch
+            if (id != devise.Id)
             {
-                return View();
+                return BadRequest();
             }
+            int index = devises.FindIndex((d) => d.Id == id);
+            if (index < 0)
+            {
+                return NotFound();
+            }
+            devises[index] = devise;
+            return NoContent();
         }
 
         // GET: DevisesController/Delete/5
