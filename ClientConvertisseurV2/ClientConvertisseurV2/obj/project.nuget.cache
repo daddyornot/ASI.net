@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "DD7mZPd31lQ=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp1\\tp1\\ClientConvertisseurV2\\ClientConvertisseurV2\\ClientConvertisseurV2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\damie\\.nuget\\packages\\communitytoolkit.mvvm\\8.3.2\\communitytoolkit.mvvm.8.3.2.nupkg.sha512",
+    "C:\\Users\\damie\\.nuget\\packages\\microsoft.ui.xaml\\2.8.6\\microsoft.ui.xaml.2.8.6.nupkg.sha512",
+    "C:\\Users\\damie\\.nuget\\packages\\microsoft.web.webview2\\1.0.2651.64\\microsoft.web.webview2.1.0.2651.64.nupkg.sha512",
+    "C:\\Users\\damie\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.26100.1\\microsoft.windows.sdk.buildtools.10.0.26100.1.nupkg.sha512",
+    "C:\\Users\\damie\\.nuget\\packages\\microsoft.windowsappsdk\\1.6.240829007\\microsoft.windowsappsdk.1.6.240829007.nupkg.sha512",
+    "C:\\Users\\damie\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\8.0.8\\microsoft.netcore.app.runtime.win-x86.8.0.8.nupkg.sha512",
+    "C:\\Users\\damie\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.38\\microsoft.windows.sdk.net.ref.10.0.19041.38.nupkg.sha512",
+    "C:\\Users\\damie\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\8.0.8\\microsoft.aspnetcore.app.runtime.win-x86.8.0.8.nupkg.sha512",
+    "C:\\Users\\damie\\.nuget\\packages\\microsoft.netcore.app.runtime.win-arm64\\8.0.8\\microsoft.netcore.app.runtime.win-arm64.8.0.8.nupkg.sha512",
+    "C:\\Users\\damie\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.8\\microsoft.aspnetcore.app.runtime.win-x64.8.0.8.nupkg.sha512",
+    "C:\\Users\\damie\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-arm64\\8.0.8\\microsoft.windowsdesktop.app.runtime.win-arm64.8.0.8.nupkg.sha512",
+    "C:\\Users\\damie\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.8\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.8.nupkg.sha512",
+    "C:\\Users\\damie\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-arm64\\8.0.8\\microsoft.aspnetcore.app.runtime.win-arm64.8.0.8.nupkg.sha512",
+    "C:\\Users\\damie\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.8\\microsoft.netcore.app.runtime.win-x64.8.0.8.nupkg.sha512",
+    "C:\\Users\\damie\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\8.0.8\\microsoft.windowsdesktop.app.runtime.win-x86.8.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}
