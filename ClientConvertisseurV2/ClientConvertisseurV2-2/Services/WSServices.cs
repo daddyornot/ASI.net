@@ -11,36 +11,33 @@ namespace ClientConvertisseurV2_2.Services
 {
     internal class WSServices : IServices
     {
-        private HttpClient client;
-        private static WSServices instance = null;
-        private readonly DialogService _dialogService;
+        private HttpClient _client;
+        private static WSServices _instance = null;
 
         private WSServices(string uri) 
         {
             // "https://localhost:7296/api/"
-            client = new HttpClient();
-            client.BaseAddress = new Uri(uri);
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept
+            _client = new HttpClient();
+            _client.BaseAddress = new Uri(uri);
+            _client.DefaultRequestHeaders.Accept.Clear();
+            _client.DefaultRequestHeaders.Accept
                 .Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
         public static WSServices GetInstance(string uri)
         {
-            if (instance == null)
+            if (_instance == null)
             {
-                instance = new WSServices(uri);
+                _instance = new WSServices(uri);
             }
-            return instance;
+            return _instance;
         }
 
         public async Task<List<Devise>> GetDevisesAsync(string nomControleur)
         {
             try
             {
-                // ex. nomControleur : "devises"
-                Debug.WriteLine("nomControleur: " + client.BaseAddress + nomControleur );
-                return await client.GetFromJsonAsync<List<Devise>>(nomControleur);
+                return await _client.GetFromJsonAsync<List<Devise>>(nomControleur);
             }
             catch (Exception ex)
             {
