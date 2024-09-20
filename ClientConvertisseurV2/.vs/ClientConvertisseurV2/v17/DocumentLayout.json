@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp1\\tp1\\ClientConvertisseurV2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{01480EB3-EF9B-42B8-87A0-63FF6D37004F}|ClientConvertisseurV2-2\\ClientConvertisseurV2-2.csproj|c:\\users\\damie\\documents\\ecole\\s9\\net c#\\tp\\tp1\\tp1\\clientconvertisseurv2\\clientconvertisseurv2-2\\viewmodels\\convertisseureuroviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01480EB3-EF9B-42B8-87A0-63FF6D37004F}|ClientConvertisseurV2-2\\ClientConvertisseurV2-2.csproj|solutionrelative:clientconvertisseurv2-2\\viewmodels\\convertisseureuroviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01480EB3-EF9B-42B8-87A0-63FF6D37004F}|ClientConvertisseurV2-2\\ClientConvertisseurV2-2.csproj|c:\\users\\damie\\documents\\ecole\\s9\\net c#\\tp\\tp1\\tp1\\clientconvertisseurv2\\clientconvertisseurv2-2\\services\\wsservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01480EB3-EF9B-42B8-87A0-63FF6D37004F}|ClientConvertisseurV2-2\\ClientConvertisseurV2-2.csproj|solutionrelative:clientconvertisseurv2-2\\services\\wsservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{01480EB3-EF9B-42B8-87A0-63FF6D37004F}|ClientConvertisseurV2-2\\ClientConvertisseurV2-2.csproj|c:\\users\\damie\\documents\\ecole\\s9\\net c#\\tp\\tp1\\tp1\\clientconvertisseurv2\\clientconvertisseurv2-2\\views\\convertisseureuropage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01480EB3-EF9B-42B8-87A0-63FF6D37004F}|ClientConvertisseurV2-2\\ClientConvertisseurV2-2.csproj|solutionrelative:clientconvertisseurv2-2\\views\\convertisseureuropage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{01480EB3-EF9B-42B8-87A0-63FF6D37004F}|ClientConvertisseurV2-2\\ClientConvertisseurV2-2.csproj|c:\\users\\damie\\documents\\ecole\\s9\\net c#\\tp\\tp1\\tp1\\clientconvertisseurv2\\clientconvertisseurv2-2\\viewmodels\\convertisseureuroviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01480EB3-EF9B-42B8-87A0-63FF6D37004F}|ClientConvertisseurV2-2\\ClientConvertisseurV2-2.csproj|solutionrelative:clientconvertisseurv2-2\\viewmodels\\convertisseureuroviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{01480EB3-EF9B-42B8-87A0-63FF6D37004F}|ClientConvertisseurV2-2\\ClientConvertisseurV2-2.csproj|c:\\users\\damie\\documents\\ecole\\s9\\net c#\\tp\\tp1\\tp1\\clientconvertisseurv2\\clientconvertisseurv2-2\\views\\convertisseureuropage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{01480EB3-EF9B-42B8-87A0-63FF6D37004F}|ClientConvertisseurV2-2\\ClientConvertisseurV2-2.csproj|solutionrelative:clientconvertisseurv2-2\\views\\convertisseureuropage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01480EB3-EF9B-42B8-87A0-63FF6D37004F}|ClientConvertisseurV2-2\\ClientConvertisseurV2-2.csproj|c:\\users\\damie\\documents\\ecole\\s9\\net c#\\tp\\tp1\\tp1\\clientconvertisseurv2\\clientconvertisseurv2-2\\services\\wsservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01480EB3-EF9B-42B8-87A0-63FF6D37004F}|ClientConvertisseurV2-2\\ClientConvertisseurV2-2.csproj|solutionrelative:clientconvertisseurv2-2\\services\\wsservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +34,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "WSServices.cs",
               "DocumentMoniker": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp1\\tp1\\ClientConvertisseurV2\\ClientConvertisseurV2-2\\Services\\WSServices.cs",
               "RelativeDocumentMoniker": "ClientConvertisseurV2-2\\Services\\WSServices.cs",
@@ -47,20 +47,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ConvertisseurEuroViewModel.cs",
               "DocumentMoniker": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp1\\tp1\\ClientConvertisseurV2\\ClientConvertisseurV2-2\\ViewModels\\ConvertisseurEuroViewModel.cs",
               "RelativeDocumentMoniker": "ClientConvertisseurV2-2\\ViewModels\\ConvertisseurEuroViewModel.cs",
-              "ToolTip": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp1\\tp1\\ClientConvertisseurV2\\ClientConvertisseurV2-2\\ViewModels\\ConvertisseurEuroViewModel.cs*",
-              "RelativeToolTip": "ClientConvertisseurV2-2\\ViewModels\\ConvertisseurEuroViewModel.cs*",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwA4AAAAuAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp1\\tp1\\ClientConvertisseurV2\\ClientConvertisseurV2-2\\ViewModels\\ConvertisseurEuroViewModel.cs",
+              "RelativeToolTip": "ClientConvertisseurV2-2\\ViewModels\\ConvertisseurEuroViewModel.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBQAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-20T08:57:47.576Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "ConvertisseurEuroPage.xaml",
               "DocumentMoniker": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp1\\tp1\\ClientConvertisseurV2\\ClientConvertisseurV2-2\\Views\\ConvertisseurEuroPage.xaml",
               "RelativeDocumentMoniker": "ClientConvertisseurV2-2\\Views\\ConvertisseurEuroPage.xaml",
@@ -73,7 +73,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ConvertisseurEuroPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp1\\tp1\\ClientConvertisseurV2\\ClientConvertisseurV2-2\\Views\\ConvertisseurEuroPage.xaml.cs",
               "RelativeDocumentMoniker": "ClientConvertisseurV2-2\\Views\\ConvertisseurEuroPage.xaml.cs",
