@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ClientConvertisseurV1.Models
+﻿namespace ClientConvertisseurV1.Models
 {
     /// <summary>
     /// Classe Devise, représentant un objet devise avec un id, un nom, un taux

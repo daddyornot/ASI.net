@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using ClientConvertisseurV1.Models;
+using ClientConvertisseurV2.Models;
 
-namespace ClientConvertisseurV1.Services
+namespace ClientConvertisseurV2.Services
 {
     internal interface IServices
     {

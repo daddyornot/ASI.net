@@ -5,9 +5,9 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
-using ClientConvertisseurV1.Models;
+using ClientConvertisseurV2.Models;
 
-namespace ClientConvertisseurV1.Services
+namespace ClientConvertisseurV2.Services
 {
     internal class WSServices : IServices
     {
