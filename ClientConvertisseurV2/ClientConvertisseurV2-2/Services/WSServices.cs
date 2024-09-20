@@ -9,6 +9,9 @@ using ClientConvertisseurV2_2.Models;
 
 namespace ClientConvertisseurV2_2.Services
 {
+    /// <summary>
+    /// Classe permettant de gérer les services web
+    /// </summary>
     internal class WSServices : IServices
     {
         private HttpClient _client;
@@ -24,6 +27,11 @@ namespace ClientConvertisseurV2_2.Services
                 .Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
+        /// <summary>
+        /// Singleton pour l'instance de WSServices
+        /// </summary>
+        /// <param name="uri">L'url de l'api</param>
+        /// <returns>L'instance de la classe</returns>
         public static WSServices GetInstance(string uri)
         {
             if (_instance == null)
@@ -33,6 +41,11 @@ namespace ClientConvertisseurV2_2.Services
             return _instance;
         }
 
+        /// <summary>
+        /// Méthode permettant de récupérer les devises depuis l'API
+        /// </summary>
+        /// <param name="nomControleur">Le nom du endpoint</param>
+        /// <returns>Une liste de devises</returns>
         public async Task<List<Devise>> GetDevisesAsync(string nomControleur)
         {
             try

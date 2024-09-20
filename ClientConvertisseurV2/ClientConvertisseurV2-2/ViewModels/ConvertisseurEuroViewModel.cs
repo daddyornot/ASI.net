@@ -8,6 +8,9 @@ using Microsoft.UI.Xaml.Controls;
 
 namespace ClientConvertisseurV2_2.ViewModels;
 
+/// <summary>
+/// Classe permettant de gérer la conversion d'un montant en euros en une devise sélectionnée
+/// </summary>
 public class ConvertisseurEuroViewModel : ObservableObject
 {
     public ConvertisseurEuroViewModel()
@@ -58,7 +61,10 @@ public class ConvertisseurEuroViewModel : ObservableObject
         }
     }
 
-
+    /// <summary>
+    /// Méthode permettant de récupérer les devises depuis l'API
+    /// </summary>
+    /// <exception cref="Exception"></exception>
     private async void ActionGetAsyncData()
     {
         var result = await _wsServices.GetDevisesAsync("devises");
@@ -84,6 +90,10 @@ public class ConvertisseurEuroViewModel : ObservableObject
         }
     }
 
+    /// <summary>
+    /// Méthode permettant de convertir un montant en euros en une devise sélectionnée
+    /// </summary>
+    /// <exception cref="Exception"></exception>
     private async void ActionSetConversion()
     {
         var baseAmount = MontantEuros;
