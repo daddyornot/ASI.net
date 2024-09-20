@@ -251,3 +251,8 @@ C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\Client
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\qualifiers.txt.intermediate
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\MultipleQualifiersPerDimensionFound.txt
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\ProjectArchitectures.txt
+C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Views\ConvertisseurEuroPage.xbf
+C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Views\ConvertisseurEuroPage.g.i.cs
+C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Views\ConvertisseurEuroPage.g.cs
+C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Views\ConvertisseurEuroPage.xaml
+C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Views\ConvertisseurEuroPage.xbf

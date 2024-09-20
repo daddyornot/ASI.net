@@ -30,25 +30,25 @@
     <AppXManifest Include="C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-09-20T06:39:04.951</Modified>
+      <Modified>2024-09-20T08:08:04.518</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-09-20T06:39:04.580</Modified>
+      <Modified>2024-09-20T08:08:04.232</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\ClientConvertisseurV2.runtimeconfig.json">
       <PackagePath>ClientConvertisseurV2.runtimeconfig.json</PackagePath>
-      <Modified>2024-09-20T06:39:04.249</Modified>
+      <Modified>2024-09-20T07:58:46.350</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\ClientConvertisseurV2.dll">
       <PackagePath>ClientConvertisseurV2.dll</PackagePath>
-      <Modified>2024-09-20T06:39:03.525</Modified>
+      <Modified>2024-09-20T08:08:04.082</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\apphost.exe">
       <PackagePath>ClientConvertisseurV2.exe</PackagePath>
-      <Modified>2024-09-20T06:39:03.545</Modified>
+      <Modified>2024-09-20T08:08:04.098</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\damie\.nuget\packages\microsoft.web.webview2\1.0.2651.64\runtimes\win-x86\native\WebView2Loader.dll">
       <PackagePath>runtimes\win-x86\native\WebView2Loader.dll</PackagePath>
@@ -876,7 +876,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\ClientConvertisseurV2.deps.json">
       <PackagePath>ClientConvertisseurV2.deps.json</PackagePath>
-      <Modified>2024-09-20T06:39:04.041</Modified>
+      <Modified>2024-09-20T07:58:46.347</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>

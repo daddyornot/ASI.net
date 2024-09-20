@@ -17,7 +17,7 @@ namespace ClientConvertisseurV2.Services
 
         private WSServices(string uri) 
         {
-            // "https://127.0.0.1:7296/api"
+            // "https://localhost:7296/api/"
             client = new HttpClient();
             client.BaseAddress = new Uri(uri);
             client.DefaultRequestHeaders.Accept.Clear();
