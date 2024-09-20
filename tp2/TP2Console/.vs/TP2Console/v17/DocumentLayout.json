@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp2\\TP2Console\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7CECD100-0BCB-4BC5-9028-081E944AED67}|TP2Console\\TP2Console.csproj|c:\\users\\damie\\documents\\ecole\\s9\\net c#\\tp\\tp2\\tp2console\\tp2console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CECD100-0BCB-4BC5-9028-081E944AED67}|TP2Console\\TP2Console.csproj|solutionrelative:tp2console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7CECD100-0BCB-4BC5-9028-081E944AED67}|TP2Console\\TP2Console.csproj|c:\\users\\damie\\documents\\ecole\\s9\\net c#\\tp\\tp2\\tp2console\\tp2console\\models\\entityframework\\postgrescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CECD100-0BCB-4BC5-9028-081E944AED67}|TP2Console\\TP2Console.csproj|solutionrelative:tp2console\\models\\entityframework\\postgrescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,20 +15,16 @@
       "RelativeMoniker": "D:0:0:{7CECD100-0BCB-4BC5-9028-081E944AED67}|TP2Console\\TP2Console.csproj|solutionrelative:tp2console\\models\\entityframework\\film.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CECD100-0BCB-4BC5-9028-081E944AED67}|TP2Console\\TP2Console.csproj|c:\\users\\damie\\documents\\ecole\\s9\\net c#\\tp\\tp2\\tp2console\\tp2console\\models\\entityframework\\avi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CECD100-0BCB-4BC5-9028-081E944AED67}|TP2Console\\TP2Console.csproj|solutionrelative:tp2console\\models\\entityframework\\avi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CECD100-0BCB-4BC5-9028-081E944AED67}|TP2Console\\TP2Console.csproj|c:\\users\\damie\\documents\\ecole\\s9\\net c#\\tp\\tp2\\tp2console\\tp2console\\models\\entityframework\\categorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CECD100-0BCB-4BC5-9028-081E944AED67}|TP2Console\\TP2Console.csproj|solutionrelative:tp2console\\models\\entityframework\\categorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7CECD100-0BCB-4BC5-9028-081E944AED67}|TP2Console\\TP2Console.csproj|c:\\users\\damie\\documents\\ecole\\s9\\net c#\\tp\\tp2\\tp2console\\tp2console\\models\\entityframework\\utilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CECD100-0BCB-4BC5-9028-081E944AED67}|TP2Console\\TP2Console.csproj|solutionrelative:tp2console\\models\\entityframework\\utilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CECD100-0BCB-4BC5-9028-081E944AED67}|TP2Console\\TP2Console.csproj|c:\\users\\damie\\documents\\ecole\\s9\\net c#\\tp\\tp2\\tp2console\\tp2console\\models\\entityframework\\categorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CECD100-0BCB-4BC5-9028-081E944AED67}|TP2Console\\TP2Console.csproj|solutionrelative:tp2console\\models\\entityframework\\categorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CECD100-0BCB-4BC5-9028-081E944AED67}|TP2Console\\TP2Console.csproj|c:\\users\\damie\\documents\\ecole\\s9\\net c#\\tp\\tp2\\tp2console\\tp2console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CECD100-0BCB-4BC5-9028-081E944AED67}|TP2Console\\TP2Console.csproj|solutionrelative:tp2console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CECD100-0BCB-4BC5-9028-081E944AED67}|TP2Console\\TP2Console.csproj|c:\\users\\damie\\documents\\ecole\\s9\\net c#\\tp\\tp2\\tp2console\\tp2console\\models\\entityframework\\avi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CECD100-0BCB-4BC5-9028-081E944AED67}|TP2Console\\TP2Console.csproj|solutionrelative:tp2console\\models\\entityframework\\avi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,78 +42,78 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Utilisateur.cs",
               "DocumentMoniker": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp2\\TP2Console\\TP2Console\\Models\\EntityFramework\\Utilisateur.cs",
               "RelativeDocumentMoniker": "TP2Console\\Models\\EntityFramework\\Utilisateur.cs",
               "ToolTip": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp2\\TP2Console\\TP2Console\\Models\\EntityFramework\\Utilisateur.cs",
               "RelativeToolTip": "TP2Console\\Models\\EntityFramework\\Utilisateur.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBsAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T15:10:24.183Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Film.cs",
-              "DocumentMoniker": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp2\\TP2Console\\TP2Console\\Models\\EntityFramework\\Film.cs",
-              "RelativeDocumentMoniker": "TP2Console\\Models\\EntityFramework\\Film.cs",
-              "ToolTip": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp2\\TP2Console\\TP2Console\\Models\\EntityFramework\\Film.cs",
-              "RelativeToolTip": "TP2Console\\Models\\EntityFramework\\Film.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T15:10:20.297Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Categorie.cs",
-              "DocumentMoniker": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp2\\TP2Console\\TP2Console\\Models\\EntityFramework\\Categorie.cs",
-              "RelativeDocumentMoniker": "TP2Console\\Models\\EntityFramework\\Categorie.cs",
-              "ToolTip": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp2\\TP2Console\\TP2Console\\Models\\EntityFramework\\Categorie.cs",
-              "RelativeToolTip": "TP2Console\\Models\\EntityFramework\\Categorie.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T15:10:18.554Z",
+              "WhenOpened": "2024-09-20T15:26:27.455Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Avi.cs",
-              "DocumentMoniker": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp2\\TP2Console\\TP2Console\\Models\\EntityFramework\\Avi.cs",
-              "RelativeDocumentMoniker": "TP2Console\\Models\\EntityFramework\\Avi.cs",
-              "ToolTip": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp2\\TP2Console\\TP2Console\\Models\\EntityFramework\\Avi.cs",
-              "RelativeToolTip": "TP2Console\\Models\\EntityFramework\\Avi.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Film.cs",
+              "DocumentMoniker": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp2\\TP2Console\\TP2Console\\Models\\EntityFramework\\Film.cs",
+              "RelativeDocumentMoniker": "TP2Console\\Models\\EntityFramework\\Film.cs",
+              "ToolTip": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp2\\TP2Console\\TP2Console\\Models\\EntityFramework\\Film.cs",
+              "RelativeToolTip": "TP2Console\\Models\\EntityFramework\\Film.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwBwAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T15:10:07.955Z",
+              "WhenOpened": "2024-09-20T15:24:38.991Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PostgresContext.cs",
-              "DocumentMoniker": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp2\\TP2Console\\TP2Console\\Models\\EntityFramework\\PostgresContext.cs",
-              "RelativeDocumentMoniker": "TP2Console\\Models\\EntityFramework\\PostgresContext.cs",
-              "ToolTip": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp2\\TP2Console\\TP2Console\\Models\\EntityFramework\\PostgresContext.cs",
-              "RelativeToolTip": "TP2Console\\Models\\EntityFramework\\PostgresContext.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAA9wCsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Categorie.cs",
+              "DocumentMoniker": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp2\\TP2Console\\TP2Console\\Models\\EntityFramework\\Categorie.cs",
+              "RelativeDocumentMoniker": "TP2Console\\Models\\EntityFramework\\Categorie.cs",
+              "ToolTip": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp2\\TP2Console\\TP2Console\\Models\\EntityFramework\\Categorie.cs",
+              "RelativeToolTip": "TP2Console\\Models\\EntityFramework\\Categorie.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAUwBYAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T15:09:33.941Z",
+              "WhenOpened": "2024-09-20T15:20:06.838Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "Avi.cs",
+              "DocumentMoniker": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp2\\TP2Console\\TP2Console\\Models\\EntityFramework\\Avi.cs",
+              "RelativeDocumentMoniker": "TP2Console\\Models\\EntityFramework\\Avi.cs",
+              "ToolTip": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp2\\TP2Console\\TP2Console\\Models\\EntityFramework\\Avi.cs",
+              "RelativeToolTip": "TP2Console\\Models\\EntityFramework\\Avi.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T15:20:01.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PostgresContext.cs",
+              "DocumentMoniker": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp2\\TP2Console\\TP2Console\\Models\\EntityFramework\\PostgresContext.cs",
+              "RelativeDocumentMoniker": "TP2Console\\Models\\EntityFramework\\PostgresContext.cs",
+              "ToolTip": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp2\\TP2Console\\TP2Console\\Models\\EntityFramework\\PostgresContext.cs",
+              "RelativeToolTip": "TP2Console\\Models\\EntityFramework\\PostgresContext.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T15:19:56.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp2\\TP2Console\\TP2Console\\Program.cs",
               "RelativeDocumentMoniker": "TP2Console\\Program.cs",
               "ToolTip": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp2\\TP2Console\\TP2Console\\Program.cs",
               "RelativeToolTip": "TP2Console\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-20T14:37:59.087Z",
               "EditorCaption": ""
