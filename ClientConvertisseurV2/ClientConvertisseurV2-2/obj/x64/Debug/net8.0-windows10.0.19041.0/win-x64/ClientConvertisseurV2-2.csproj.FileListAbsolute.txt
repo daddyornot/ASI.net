@@ -2,6 +2,7 @@ C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\Client
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\ClientConvertisseurV2-2.exe
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\App.xbf
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MainWindow.xbf
+C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Views\ConvertisseurDevisePage.xbf
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Views\ConvertisseurEuroPage.xbf
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\ClientConvertisseurV2-2.deps.json
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\ClientConvertisseurV2-2.runtimeconfig.json
@@ -11,6 +12,8 @@ C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\Client
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Web.WebView2.Core.dll
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\CommunityToolkit.Mvvm.dll
+C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.InteractiveExperiences.Projection.dll
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.WinUI.dll
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.AppLifecycle.Projection.dll
@@ -219,14 +222,18 @@ C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\Client
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\App.g.cs
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MainWindow.g.i.cs
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MainWindow.g.cs
+C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Views\ConvertisseurDevisePage.g.i.cs
+C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Views\ConvertisseurDevisePage.g.cs
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Views\ConvertisseurEuroPage.g.i.cs
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Views\ConvertisseurEuroPage.g.cs
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\XamlTypeInfo.g.cs
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\App.xaml
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MainWindow.xaml
+C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Views\ConvertisseurDevisePage.xaml
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Views\ConvertisseurEuroPage.xaml
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\App.xbf
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MainWindow.xbf
+C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Views\ConvertisseurDevisePage.xbf
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Views\ConvertisseurEuroPage.xbf
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\XamlSaveStateFile.xml
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\ClientConvertisseurV2-2.GeneratedMSBuildEditorConfig.editorconfig
@@ -256,10 +263,3 @@ C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\Client
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\qualifiers.txt.intermediate
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\ProjectArchitectures.txt
-C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Views\ConvertisseurDevisePage.xbf
-C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Views\ConvertisseurDevisePage.g.i.cs
-C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Views\ConvertisseurDevisePage.g.cs
-C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Views\ConvertisseurDevisePage.xaml
-C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Views\ConvertisseurDevisePage.xbf

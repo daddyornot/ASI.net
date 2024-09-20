@@ -1,0 +1,7 @@
+# Build Folders (you can keep bin if you'd like to check binaries into source control)
+bin/
+obj/
+
+# Rider project files
+.idea/
+*.sln.iml
