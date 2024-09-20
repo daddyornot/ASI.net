@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClientConvertisseurV2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88d2464460070e23120f87dcb6deefcdcb9a5c0f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01d26e1ed9659fc9c6ff4abc3af7b9ce5b6ba335")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClientConvertisseurV2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClientConvertisseurV2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
