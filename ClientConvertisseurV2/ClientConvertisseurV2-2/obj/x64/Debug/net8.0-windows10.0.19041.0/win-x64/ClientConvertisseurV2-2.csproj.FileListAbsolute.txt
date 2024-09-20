@@ -258,3 +258,8 @@ C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\Client
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\ProjectArchitectures.txt
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Views\ConvertisseurDevisePage.xbf
+C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Views\ConvertisseurDevisePage.g.i.cs
+C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Views\ConvertisseurDevisePage.g.cs
+C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Views\ConvertisseurDevisePage.xaml
+C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Views\ConvertisseurDevisePage.xbf

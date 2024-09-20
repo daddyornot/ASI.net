@@ -226,35 +226,37 @@ namespace ClientConvertisseurV2_2.ClientConvertisseurV2_2_XamlTypeInfo
         
         private void InitTypeTables()
         {
-            _typeNameTable = new string[13];
+            _typeNameTable = new string[14];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
             _typeNameTable[3] = "Boolean";
             _typeNameTable[4] = "ClientConvertisseurV2_2.MainWindow";
             _typeNameTable[5] = "Microsoft.UI.Xaml.Window";
-            _typeNameTable[6] = "ClientConvertisseurV2_2.Views.ConvertisseurEuroPage";
+            _typeNameTable[6] = "ClientConvertisseurV2_2.Views.ConvertisseurDevisePage";
             _typeNameTable[7] = "Microsoft.UI.Xaml.Controls.Page";
             _typeNameTable[8] = "Microsoft.UI.Xaml.Controls.UserControl";
-            _typeNameTable[9] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[10] = "Microsoft.UI.Xaml.DependencyObject";
-            _typeNameTable[11] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
-            _typeNameTable[12] = "Int32";
+            _typeNameTable[9] = "ClientConvertisseurV2_2.Views.ConvertisseurEuroPage";
+            _typeNameTable[10] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[11] = "Microsoft.UI.Xaml.DependencyObject";
+            _typeNameTable[12] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[13] = "Int32";
 
-            _typeTable = new global::System.Type[13];
+            _typeTable = new global::System.Type[14];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
             _typeTable[3] = typeof(global::System.Boolean);
             _typeTable[4] = typeof(global::ClientConvertisseurV2_2.MainWindow);
             _typeTable[5] = typeof(global::Microsoft.UI.Xaml.Window);
-            _typeTable[6] = typeof(global::ClientConvertisseurV2_2.Views.ConvertisseurEuroPage);
+            _typeTable[6] = typeof(global::ClientConvertisseurV2_2.Views.ConvertisseurDevisePage);
             _typeTable[7] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
             _typeTable[8] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
-            _typeTable[9] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[10] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
-            _typeTable[11] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
-            _typeTable[12] = typeof(global::System.Int32);
+            _typeTable[9] = typeof(global::ClientConvertisseurV2_2.Views.ConvertisseurEuroPage);
+            _typeTable[10] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[11] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
+            _typeTable[12] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[13] = typeof(global::System.Int32);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -291,13 +293,15 @@ namespace ClientConvertisseurV2_2.ClientConvertisseurV2_2_XamlTypeInfo
 
         private object Activate_0_XamlControlsResources() { return new global::Microsoft.UI.Xaml.Controls.XamlControlsResources(); }
         private object Activate_4_MainWindow() { return new global::ClientConvertisseurV2_2.MainWindow(); }
-        private object Activate_6_ConvertisseurEuroPage() { return new global::ClientConvertisseurV2_2.Views.ConvertisseurEuroPage(); }
-        private object Activate_9_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
+        private object Activate_6_ConvertisseurDevisePage() { return new global::ClientConvertisseurV2_2.Views.ConvertisseurDevisePage(); }
+        private object Activate_9_ConvertisseurEuroPage() { return new global::ClientConvertisseurV2_2.Views.ConvertisseurEuroPage(); }
+        private object Activate_10_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void StaticInitializer_0_XamlControlsResources() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources).TypeHandle);
         private void StaticInitializer_4_MainWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::ClientConvertisseurV2_2.MainWindow).TypeHandle);
-        private void StaticInitializer_6_ConvertisseurEuroPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::ClientConvertisseurV2_2.Views.ConvertisseurEuroPage).TypeHandle);
-        private void StaticInitializer_9_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
-        private void StaticInitializer_11_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
+        private void StaticInitializer_6_ConvertisseurDevisePage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::ClientConvertisseurV2_2.Views.ConvertisseurDevisePage).TypeHandle);
+        private void StaticInitializer_9_ConvertisseurEuroPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::ClientConvertisseurV2_2.Views.ConvertisseurEuroPage).TypeHandle);
+        private void StaticInitializer_10_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
+        private void StaticInitializer_12_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -305,7 +309,7 @@ namespace ClientConvertisseurV2_2.ClientConvertisseurV2_2_XamlTypeInfo
             var newItem = (global::System.Object)item;
             collection.Add(newKey, newItem);
         }
-        private void VectorAdd_11_IList(object instance, object item)
+        private void VectorAdd_12_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
@@ -355,10 +359,10 @@ namespace ClientConvertisseurV2_2.ClientConvertisseurV2_2_XamlTypeInfo
                 xamlType = new global::ClientConvertisseurV2_2.ClientConvertisseurV2_2_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 6:   //  ClientConvertisseurV2_2.Views.ConvertisseurEuroPage
+            case 6:   //  ClientConvertisseurV2_2.Views.ConvertisseurDevisePage
                 userType = new global::ClientConvertisseurV2_2.ClientConvertisseurV2_2_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_ConvertisseurEuroPage;
-                userType.StaticInitializer = StaticInitializer_6_ConvertisseurEuroPage;
+                userType.Activator = Activate_6_ConvertisseurDevisePage;
+                userType.StaticInitializer = StaticInitializer_6_ConvertisseurDevisePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -371,10 +375,18 @@ namespace ClientConvertisseurV2_2.ClientConvertisseurV2_2_XamlTypeInfo
                 xamlType = new global::ClientConvertisseurV2_2.ClientConvertisseurV2_2_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 9:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+            case 9:   //  ClientConvertisseurV2_2.Views.ConvertisseurEuroPage
+                userType = new global::ClientConvertisseurV2_2.ClientConvertisseurV2_2_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_9_ConvertisseurEuroPage;
+                userType.StaticInitializer = StaticInitializer_9_ConvertisseurEuroPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 10:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
                 userType = new global::ClientConvertisseurV2_2.ClientConvertisseurV2_2_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_9_TreeViewNode;
-                userType.StaticInitializer = StaticInitializer_9_TreeViewNode;
+                userType.Activator = Activate_10_TreeViewNode;
+                userType.StaticInitializer = StaticInitializer_10_TreeViewNode;
                 userType.AddMemberName("Children");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Depth");
@@ -386,19 +398,19 @@ namespace ClientConvertisseurV2_2.ClientConvertisseurV2_2_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 10:   //  Microsoft.UI.Xaml.DependencyObject
+            case 11:   //  Microsoft.UI.Xaml.DependencyObject
                 xamlType = new global::ClientConvertisseurV2_2.ClientConvertisseurV2_2_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 11:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+            case 12:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
                 userType = new global::ClientConvertisseurV2_2.ClientConvertisseurV2_2_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.StaticInitializer = StaticInitializer_11_IList;
-                userType.CollectionAdd = VectorAdd_11_IList;
+                userType.StaticInitializer = StaticInitializer_12_IList;
+                userType.CollectionAdd = VectorAdd_12_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 12:   //  Int32
+            case 13:   //  Int32
                 xamlType = new global::ClientConvertisseurV2_2.ClientConvertisseurV2_2_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }

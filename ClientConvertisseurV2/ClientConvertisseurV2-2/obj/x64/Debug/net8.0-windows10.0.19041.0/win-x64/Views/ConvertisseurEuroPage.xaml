@@ -13,7 +13,7 @@
     <RelativePanel>
         <TextBlock x:ConnectionId='2'
             x:Name="PanelTitle"
-            Text="Convertisseur"
+            Text="Convertisseur EURO - DEVISE"
             Margin="10"
             FontSize="24"
             RelativePanel.AlignHorizontalCenterWithPanel="True"
@@ -26,7 +26,7 @@
             RelativePanel.Below="PanelTitle" />
         <TextBox x:ConnectionId='4'
             x:Name="TxtAmount"
-            Text="{Binding MontantEuros, Mode=TwoWay}"
+            Text="{Binding MontantEuro, Mode=TwoWay}"
             Margin="10"
             RelativePanel.AlignHorizontalCenterWithPanel="True"
             RelativePanel.Below="TxtTitle" />
@@ -48,7 +48,7 @@
             RelativePanel.AlignHorizontalCenterWithPanel="True" />
         <TextBlock x:ConnectionId='7'
             x:Name="TotalAmountTitle"
-            Text="Montant en euros"
+            Text="Montant en devise selectionnée"
             Margin="10"
             RelativePanel.AlignHorizontalCenterWithPanel="True"
             RelativePanel.Below="Button" />

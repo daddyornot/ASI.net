@@ -43,6 +43,7 @@ namespace ClientConvertisseurV2_2
             
             // ViewModel
             services.AddTransient<ConvertisseurEuroViewModel>();
+            services.AddTransient<ConvertisseurDeviseViewModel>();
 
             Services = services.BuildServiceProvider();
         }
@@ -67,7 +68,7 @@ namespace ClientConvertisseurV2_2
             m_window.Activate();
             MainRoot = m_window.Content as FrameworkElement;
             // Navigate to the first page
-            rootFrame.Navigate(typeof(ConvertisseurEuroPage));
+            rootFrame.Navigate(typeof(ConvertisseurDevisePage));
         }
 
         private Window m_window;
