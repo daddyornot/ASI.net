@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "fDnawCqdvrM=",
+  "dgSpecHash": "dZpBQO5BJAU=",
   "success": true,
   "projectFilePath": "C:\\Users\\damie\\Documents\\Ecole\\s9\\NET C#\\tp\\tp1\\tp1\\ClientConvertisseurV2\\ClientConvertisseurV2-2\\ClientConvertisseurV2-2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\damie\\.nuget\\packages\\communitytoolkit.mvvm\\8.3.2\\communitytoolkit.mvvm.8.3.2.nupkg.sha512",
+    "C:\\Users\\damie\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\damie\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\damie\\.nuget\\packages\\microsoft.web.webview2\\1.0.2651.64\\microsoft.web.webview2.1.0.2651.64.nupkg.sha512",
     "C:\\Users\\damie\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
     "C:\\Users\\damie\\.nuget\\packages\\microsoft.windowsappsdk\\1.6.240829007\\microsoft.windowsappsdk.1.6.240829007.nupkg.sha512",

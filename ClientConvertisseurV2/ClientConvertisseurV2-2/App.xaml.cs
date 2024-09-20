@@ -16,6 +16,8 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using ClientConvertisseurV2_2.ViewModels;
+using Microsoft.Extensions.DependencyInjection;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -28,6 +30,7 @@ namespace ClientConvertisseurV2_2
     public partial class App : Application
     {
         public static FrameworkElement MainRoot { get; private set; }
+        public ServiceProvider Services { get; }
         
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
@@ -36,7 +39,18 @@ namespace ClientConvertisseurV2_2
         public App()
         {
             this.InitializeComponent();
+            ServiceCollection services = new ServiceCollection();
+            
+            // ViewModel
+            services.AddTransient<ConvertisseurEuroViewModel>();
+
+            Services = services.BuildServiceProvider();
         }
+        
+        /// <summary>
+        /// Gets the current instance of the App class
+        /// </summary>
+        public new static App Current => (App)Application.Current;
 
         /// <summary>
         /// Invoked when the application is launched.

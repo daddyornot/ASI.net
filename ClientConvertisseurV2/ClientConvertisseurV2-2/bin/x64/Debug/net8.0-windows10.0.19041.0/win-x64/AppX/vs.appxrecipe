@@ -29,25 +29,25 @@
     <AppXManifest Include="C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-09-20T11:38:44.422</Modified>
+      <Modified>2024-09-20T12:00:43.489</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-09-20T09:28:52.385</Modified>
+      <Modified>2024-09-20T11:55:25.610</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\ClientConvertisseurV2-2.runtimeconfig.json">
       <PackagePath>ClientConvertisseurV2-2.runtimeconfig.json</PackagePath>
-      <Modified>2024-09-20T09:06:26.752</Modified>
+      <Modified>2024-09-20T11:55:25.383</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\ClientConvertisseurV2-2.dll">
       <PackagePath>ClientConvertisseurV2-2.dll</PackagePath>
-      <Modified>2024-09-20T11:38:43.738</Modified>
+      <Modified>2024-09-20T11:55:25.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
       <PackagePath>ClientConvertisseurV2-2.exe</PackagePath>
-      <Modified>2024-09-20T11:38:43.744</Modified>
+      <Modified>2024-09-20T11:55:25.006</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\damie\.nuget\packages\microsoft.web.webview2\1.0.2651.64\runtimes\win-x64\native\WebView2Loader.dll">
       <PackagePath>runtimes\win-x64\native\WebView2Loader.dll</PackagePath>
@@ -793,6 +793,14 @@
       <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
       <Modified>2024-09-18T11:52:00.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\damie\.nuget\packages\microsoft.extensions.dependencyinjection\8.0.0\lib\net8.0\Microsoft.Extensions.DependencyInjection.dll">
+      <PackagePath>Microsoft.Extensions.DependencyInjection.dll</PackagePath>
+      <Modified>2023-10-31T14:59:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\damie\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\8.0.0\lib\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+      <PackagePath>Microsoft.Extensions.DependencyInjection.Abstractions.dll</PackagePath>
+      <Modified>2023-10-31T14:58:56.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\damie\.nuget\packages\microsoft.windowsappsdk\1.6.240829007\lib\net6.0-windows10.0.18362.0\Microsoft.InteractiveExperiences.Projection.dll">
       <PackagePath>Microsoft.InteractiveExperiences.Projection.dll</PackagePath>
       <Modified>2024-08-28T17:52:00.000</Modified>
@@ -875,7 +883,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\ClientConvertisseurV2-2.deps.json">
       <PackagePath>ClientConvertisseurV2-2.deps.json</PackagePath>
-      <Modified>2024-09-20T09:06:26.551</Modified>
+      <Modified>2024-09-20T11:55:25.325</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\damie\Documents\Ecole\s9\NET C#\tp\tp1\tp1\ClientConvertisseurV2\ClientConvertisseurV2-2\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
