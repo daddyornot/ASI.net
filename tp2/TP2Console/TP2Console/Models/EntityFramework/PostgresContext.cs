@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace TP2Console.Models.EntityFramework;
 
@@ -23,9 +24,17 @@ public partial class PostgresContext : DbContext
 
     public virtual DbSet<Utilisateur> Utilisateurs { get; set; }
 
+    public static readonly ILoggerFactory MyLoggerFactory =
+        LoggerFactory.Create(builder => { builder.AddConsole(); });
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseNpgsql("Server=localhost;port=5432;Database=postgres; uid=postgres; password=postgres;");
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https: //go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder
+            .UseLoggerFactory(MyLoggerFactory)
+            .EnableSensitiveDataLogging()
+            .UseNpgsql("Server=localhost;port=5432;Database=postgres; uid=postgres; password=postgres;");
+            // just for lazy loading
+            // .UseLazyLoadingProxies();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -42,10 +51,7 @@ public partial class PostgresContext : DbContext
                 .HasConstraintName("fk_avis_utilisateur");
         });
 
-        modelBuilder.Entity<Categorie>(entity =>
-        {
-            entity.HasKey(e => e.Idcategorie).HasName("pk_categorie");
-        });
+        modelBuilder.Entity<Categorie>(entity => { entity.HasKey(e => e.Idcategorie).HasName("pk_categorie"); });
 
         modelBuilder.Entity<Film>(entity =>
         {
@@ -56,10 +62,7 @@ public partial class PostgresContext : DbContext
                 .HasConstraintName("fk_film_categorie");
         });
 
-        modelBuilder.Entity<Utilisateur>(entity =>
-        {
-            entity.HasKey(e => e.Idutilisateur).HasName("pk_utilisateur");
-        });
+        modelBuilder.Entity<Utilisateur>(entity => { entity.HasKey(e => e.Idutilisateur).HasName("pk_utilisateur"); });
 
         OnModelCreatingPartial(modelBuilder);
     }
