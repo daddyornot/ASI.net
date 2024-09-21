@@ -24,7 +24,7 @@ namespace TP2Console
             // Exo2Q7();
             // Afficher la note moyenne de Pulp Fiction insensible à la casse
             // Exo2Q8();
-            //
+            // Afficher l'utiliseateur ayant mis la note la plus haute
             Exo2Q9();
         }
 
@@ -62,10 +62,16 @@ namespace TP2Console
         public static void Exo2Q4()
         {
             var ctx = new PostgresContext();
-            Categorie categorieAction = ctx.Categories
-                .Include(c => c.Films)
-                .ThenInclude(f => f.Avis)
-                .First(c => c.Nom == "Action");
+            // Categorie categorieAction = ctx.Categories
+                // .Include(c => c.Films)
+                // .ThenInclude(f => f.Avis)
+                // .First(c => c.Nom == "Action");
+            
+            // sans include
+            Categorie categorieAction = ctx.Categories.First(c => c.Nom == "Action");
+            ctx.Entry(categorieAction).Collection(c => c.Films).Load();
+            
+            
             Console.WriteLine("Dans la catégorie " + categorieAction.Nom + " il y a les films suivants : ");
             foreach (var film in categorieAction.Films)
             {
@@ -92,11 +98,11 @@ namespace TP2Console
         {
             var ctx = new PostgresContext();
             // List<Film> films = ctx.Films
-            //     .Where(f => f.Nom.ToLower().StartsWith("le"))
+            //     .Where(f => f.Nom.ToLower().StartsWith("le".ToLower()))
             //     .ToList();
             
             List<Film> films = ctx.Films
-                .Where(f => EF.Functions.Like(f.Nom.ToLower(), "le%"))
+                .Where(f => EF.Functions.Like(f.Nom.ToLower(), "le%".ToLower()))
                 .ToList();
             
             Console.WriteLine($"Films commençant par 'le' ({films.Count} résultats) : ");
@@ -111,12 +117,17 @@ namespace TP2Console
         {
             var ctx = new PostgresContext();
             
-            decimal noteMoyenne = ctx.Films
-                .Include(f => f.Avis)
-                .Where(f => f.Nom.ToLower() == "pulp fiction")
-                .SelectMany(f => f.Avis)
-                .Average(a => a.Note);
-    
+            // decimal noteMoyenne = ctx.Films
+            //     .Include(f => f.Avis)
+            //     .Where(f => f.Nom.ToLower() == "pulp fiction")
+            //     .SelectMany(f => f.Avis)
+            //     .Average(a => a.Note);
+
+            // sans include
+            Film pulpFiction = ctx.Films.First(f => f.Nom.ToLower() == "pulp fiction".ToLower());
+            ctx.Entry(pulpFiction).Collection(f => f.Avis).Load();
+            decimal noteMoyenne = pulpFiction.Avis.Average(a => a.Note);
+            
             Console.WriteLine("Note moyenne de Pulp Fiction : " + noteMoyenne);
         }
 
@@ -124,14 +135,13 @@ namespace TP2Console
         public static void Exo2Q9()
         {
             var ctx = new PostgresContext();
+            
             Utilisateur utilisateur = ctx.Utilisateurs
-                .Include(u => u.Avis)
                 .OrderByDescending(u => u.Avis.Max(a => a.Note))
                 .First();
 
-            Console.WriteLine("Utilisateur ayant mis la note la plus haute : " + utilisateur.Login);
+            Console.WriteLine("Utilisateur ayant mis la note la plus haute : " + utilisateur);
         }
-
     }
 }
 
