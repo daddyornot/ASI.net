@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using Tp3Partie1.Models.EntityFramework;
 
 namespace Tp3Partie1
 {
@@ -14,8 +16,22 @@ namespace Tp3Partie1
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            // Add DbContext 
+            builder.Services
+                .AddDbContext<SeriesDbContext>(options =>
+                    options.UseNpgsql(builder.Configuration.GetConnectionString("SeriesDbContext"))
+                );
+            
             var app = builder.Build();
 
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                var context = services.GetRequiredService<SeriesDbContext>();
+                context.Database.EnsureCreated();
+                // DbInitializer.Initialize(context);
+            }
+            
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
