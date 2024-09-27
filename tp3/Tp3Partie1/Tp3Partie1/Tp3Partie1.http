@@ -4,3 +4,9 @@ GET {{Tp3Partie1_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+
+
+PUT http://localhost:5074/api/Utilisateurs/1001
+Accept: application/json
+
+

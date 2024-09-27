@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.JsonPatch;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Tp3Partie1.Models.EntityFramework;
 
@@ -147,6 +148,32 @@ namespace Tp3Partie1.Controllers
 
             return CreatedAtAction("GetUtilisateur", new { id = utilisateur.UtilisateurId }, utilisateur);
         }
+
+        [HttpPatch("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> PatchUtilisateur(int id, JsonPatchDocument<Utilisateur> patchEntity)
+        {
+            var user = await _context.Utilisateurs.FirstOrDefaultAsync(u => u.UtilisateurId == id);
+            if (user == null)
+            {
+                return NotFound("Utilisateur non trouvé");
+            }
+            
+            patchEntity.ApplyTo(user, ModelState);
+
+            TryValidateModel(user);
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            
+            await _context.SaveChangesAsync();
+            return new ObjectResult(user);
+
+        }
+
 
         // DELETE: api/Utilisateurs/5
         // [HttpDelete("{id}")]
