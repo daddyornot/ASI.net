@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Tp3Partie1.Models.EntityFramework;
 
@@ -18,10 +19,12 @@ public partial class Notation
     
     [ForeignKey(nameof(UtilisateurId))]
     [InverseProperty(nameof(UtilisateurNotant.NotesUtilisateur))]
+    [JsonIgnore]
     public virtual Utilisateur UtilisateurNotant { get; set; } = null!;
     
     [ForeignKey(nameof(SerieId))]
     [InverseProperty(nameof(Serie.NotesSerie))]
+    [JsonIgnore]
     public virtual Serie SerieNotee { get; set; } = null!;
     
 }

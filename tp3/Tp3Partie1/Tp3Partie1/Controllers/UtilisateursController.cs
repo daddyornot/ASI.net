@@ -22,16 +22,40 @@ namespace Tp3Partie1.Controllers
 
         // GET: api/Utilisateurs
         [HttpGet]
+        [ProducesResponseType<List<Utilisateur>>(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<IEnumerable<Utilisateur>>> GetUtilisateurs()
         {
             return await _context.Utilisateurs.ToListAsync();
         }
 
-        // GET: api/Utilisateurs/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Utilisateur>> GetUtilisateur(int id)
+        // GET: api/Utilisateurs/GetById/5
+        [HttpGet]
+        [ProducesResponseType<Utilisateur>(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [Route("[action]/{id:int}")]
+        [ActionName("GetById")]
+        public async Task<ActionResult<Utilisateur>> GetUtilisateurById(int id)
         {
             var utilisateur = await _context.Utilisateurs.FindAsync(id);
+
+            if (utilisateur == null)
+            {
+                return NotFound("Utilisateur non trouvé");
+            }
+
+            return utilisateur;
+        }
+
+        // GET: api/Utilisateurs/GetByEmail/test@mail.com
+        [HttpGet]
+        [ProducesResponseType<Utilisateur>(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [Route("[action]/{email}")]
+        [ActionName("GetByEmail")]
+        public async Task<ActionResult<Utilisateur>> GetUtilisateurByEmail(string email)
+        {
+            var utilisateur = await _context.Utilisateurs.FirstOrDefaultAsync(u => u.Mail.ToLower() == email.ToLower());
 
             if (utilisateur == null)
             {
@@ -44,6 +68,9 @@ namespace Tp3Partie1.Controllers
         // PUT: api/Utilisateurs/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> PutUtilisateur(int id, Utilisateur utilisateur)
         {
             if (id != utilisateur.UtilisateurId)
@@ -75,6 +102,7 @@ namespace Tp3Partie1.Controllers
         // POST: api/Utilisateurs
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [ProducesResponseType<Utilisateur>(StatusCodes.Status201Created)]
         public async Task<ActionResult<Utilisateur>> PostUtilisateur(Utilisateur utilisateur)
         {
             _context.Utilisateurs.Add(utilisateur);
