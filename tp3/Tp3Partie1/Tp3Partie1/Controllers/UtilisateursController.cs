@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Tp3Partie1.Models.EntityFramework;
 
 namespace Tp3Partie1.Controllers
 {
+    /// <summary>
+    ///  Controller pour les utilisateurs
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class UtilisateursController : ControllerBase
@@ -21,16 +18,25 @@ namespace Tp3Partie1.Controllers
             _context = context;
         }
 
-        // GET: api/Utilisateurs
+        /// <summary>
+        /// Retourne tous les utilisateurs
+        /// </summary>
+        /// <returns> Liste de tous les utilisateurs</returns>
+        /// <response code="200">Utilisateurs trouvés</response>
         [HttpGet]
         [ProducesResponseType<List<Utilisateur>>(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<IEnumerable<Utilisateur>>> GetUtilisateurs()
         {
             return await _context.Utilisateurs.ToListAsync();
         }
 
-        // GET: api/Utilisateurs/GetById/5
+        /// <summary>
+        ///  Retourne l'utilisateur dont l'id est spécifié dans l'url
+        /// </summary>
+        /// <param name="id">L'id de l'utilisateur</param>
+        /// <returns>Http Response</returns>
+        /// <response code="200">Utilisateur trouvé</response>
+        /// <response code="404">Utilisateur non trouvé</response>
         [HttpGet]
         [ProducesResponseType<Utilisateur>(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -48,7 +54,14 @@ namespace Tp3Partie1.Controllers
             return utilisateur;
         }
 
-        // GET: api/Utilisateurs/GetByEmail/test@mail.com
+        /// <summary>
+        /// Retourne l'utilisateur dont l'email est spécifié dans l'url
+        /// </summary>
+        /// <param name="email">L'email de l'utilisateur</param>
+        /// <returns>Http Response</returns>
+        /// <response code="200">Utilisateur trouvé</response>
+        /// <response code="404">Utilisateur non trouvé</response>
+        /// <response code="400">Mauvais format de requete</response>
         [HttpGet]
         [ProducesResponseType<Utilisateur>(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -66,7 +79,15 @@ namespace Tp3Partie1.Controllers
             return utilisateur;
         }
 
-        // PUT: api/Utilisateurs/5
+        /// <summary>
+        ///  Modifie un utilisateur existant
+        /// </summary>
+        /// <param name="id"> L'id de l'utilisateur à modifier</param>
+        /// <param name="utilisateur"> Un objet utilisateur modifié</param>
+        /// <returns>Http Response</returns>
+        /// <response code="204">Utilisateur modifié</response>
+        /// <response code="404">Utilisateur non trouvé</response>
+        /// <response code="400">Mauvais format de requete</response>
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -78,6 +99,7 @@ namespace Tp3Partie1.Controllers
             {
                 return BadRequest(ModelState);
             }
+
             if (id != utilisateur.UtilisateurId)
             {
                 return BadRequest("L'id de l'utilisateur ne correspond pas");
@@ -95,24 +117,31 @@ namespace Tp3Partie1.Controllers
                 {
                     return NotFound("Utilisateur non trouvé");
                 }
+
                 throw;
             }
 
             return NoContent();
         }
 
-        // POST: api/Utilisateurs
+        /// <summary>
+        ///  Crée un nouvel utilisateur
+        /// </summary>
+        /// <param name="utilisateur"> Un objet utilisateur</param>
+        /// <returns> Http Response</returns>
+        /// <response code="201">Utilisateur créé</response>
+        /// <response code="400">Mauvais format de requete</response>
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         [ProducesResponseType<Utilisateur>(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<Utilisateur>> PostUtilisateur(Utilisateur utilisateur)
         {
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
+
             _context.Utilisateurs.Add(utilisateur);
             await _context.SaveChangesAsync();
 
