@@ -9,15 +9,22 @@ namespace TP2Console
     {
         static void Main(string[] args)
         {
-            Exo2.Q1();
-            Exo2.Q2();
-            Exo2.Q3();
-            Exo2.Q4();
-            Exo2.Q5();
-            Exo2.Q6();
-            Exo2.Q7();
-            Exo2.Q8();
-            Exo2.Q9();
+            // Exo2.Q1();
+            // Exo2.Q2();
+            // Exo2.Q3();
+            // Exo2.Q4();
+            // Exo2.Q5();
+            // Exo2.Q6();
+            // Exo2.Q7();
+            // Exo2.Q8();
+            // Exo2.Q9();
+            
+            // Exo3.Q1();
+            // Exo3.Q2();
+            // Exo3.Q3();
+            // Exo3.Q4();
+            // Exo3.Q5();
+            
         }
     }
 }
