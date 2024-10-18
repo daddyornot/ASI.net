@@ -1,5 +1,6 @@
 using BlazorApp1.Models;
 using BlazorApp1.Services;
+using BlazorApp1.ViewModel;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
@@ -15,6 +16,7 @@ namespace BlazorApp1
 
             // builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
             builder.Services.AddScoped<IService<Utilisateur>, WSServiceUtilisateur>();
+            builder.Services.AddScoped<AllUsersViewModel>();
             builder.Services.AddBlazorBootstrap(); 
 
             await builder.Build().RunAsync();
