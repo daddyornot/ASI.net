@@ -1,26 +1,29 @@
 ﻿@page "/addUser"
 @using BlazorApp1.Models
 @using BlazorApp1.Services
+@using BlazorApp1.Components
 
 @inject IService<Utilisateur> UtilisateurService
 
 <h3>Ajouter un utilisateur</h3>
 
-
 <UserForm Model="Model" OnSubmit="Submit" ButtonText="Ajouter un nouvel Utilisateur"></UserForm>
 
 @code {
     [SupplyParameterFromForm] private Utilisateur? Model { get; set; } = new Utilisateur();
+    [Inject] protected ToastService ToastService { get; set; }
 
     private async void Submit()
     {
         if (await UtilisateurService.PostAsync("Utilisateurs", Model))
         {
             Console.WriteLine("Utilisateur ajouté");
+            ToastService.Notify(new(ToastType.Success, "Succès !", "Utilisateur ajouté"));
         }
         else
         {
             Console.WriteLine("Erreur lors de l'ajout de l'utilisateur");
+            ToastService.Notify(new(ToastType.Danger, "Erreur ajout", "Erreur lors de l'ajout de l'utilisateur"));
         }
     }
 

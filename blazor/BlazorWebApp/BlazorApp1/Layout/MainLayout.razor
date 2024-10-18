@@ -1,7 +1,8 @@
-﻿@inherits LayoutComponentBase
+﻿@using BlazorApp1.Components
+@inherits LayoutComponentBase
 <div class="page">
     <div class="sidebar">
-        <NavMenu />
+        <NavMenu/>
     </div>
 
     <main>
@@ -12,5 +13,7 @@
         <article class="content px-4">
             @Body
         </article>
+
+        <Toasts class="p-3" AutoHide="true" Delay="4000" Placement="ToastsPlacement.TopRight"/>
     </main>
 </div>

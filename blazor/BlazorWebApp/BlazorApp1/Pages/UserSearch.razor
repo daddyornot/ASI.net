@@ -34,8 +34,8 @@ else
 
 @code {
     private Utilisateur Model { get; set; } = new Utilisateur();
-
     private SearchQuery _SearchQuery { get; set; } = new SearchQuery();
+    [Inject] protected ToastService ToastService { get; set; }
 
     private async void Search()
     {
@@ -57,10 +57,12 @@ else
         if (await UtilisateurService.PutAsync("Utilisateurs", Model.UtilisateurId, Model))
         {
             Console.WriteLine("Utilisateur modifié");
+            ToastService.Notify(new(ToastType.Success, "Succès !", "Utilisateur modifié"));
         }
         else
         {
             Console.WriteLine("Erreur lors de la modification de l'utilisateur");
+            ToastService.Notify(new(ToastType.Danger, "Erreur modification", "Erreur lors de la modification de l'utilisateur"));
         }
     }
 

@@ -1,6 +1,7 @@
 ﻿@page "/users"
 @using BlazorApp1.Models
 @using BlazorApp1.Services
+@using BlazorBootstrap
 
 @inject IService<Utilisateur> UtilisateurService
 
@@ -8,7 +9,7 @@
 
 <h1>Utilisateurs</h1>
 
-@if (utilisateurs == null)
+@if (utilisateurs.Count <= 0)
 {
     <p>
         <em>Loading...</em>
@@ -16,39 +17,66 @@
 }
 else
 {
-    <table class="table">
-        <thead>
-        <tr>
-            <th>Nom</th>
-            <th>Prénom</th>
-            <th>Mail</th>
-            <th>Mobile</th>
-            <th>Actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach (var user in utilisateurs)
-        {
-            <tr>
-                <td>@user.Nom</td>
-                <td>@user.Prenom</td>
-                <td>@user.Mail</td>
-                <td>@user.Mobile</td>
-                <td>
-                    <a href="/editUser/@user.UtilisateurId">Editer</a>
-                </td>
-            </tr>
-        }
-        </tbody>
-    </table>
+    <Grid TItem="Utilisateur"
+          DataProvider="GetAllUsersData"
+          AllowFiltering="true"
+          AllowPaging="true"
+          Responsive="true"
+          Class="table table-hover table-bordered table-striped"
+         OnRowClick="NavigateToEditUser"
+          >
+        <GridColumns >
+            <GridColumn TItem="Utilisateur" HeaderText="Nom" PropertyName="Nom">
+                @context.Nom
+            </GridColumn>
+            <GridColumn TItem="Utilisateur" HeaderText="Prénom" PropertyName="Prenom">
+                @context.Prenom
+            </GridColumn>
+            <GridColumn TItem="Utilisateur" HeaderText="Mail" PropertyName="Mail">
+                @context.Mail
+            </GridColumn>
+            <GridColumn TItem="Utilisateur" HeaderText="Mobile" PropertyName="Mobile">
+                @context.Mobile
+            </GridColumn>
+            <GridColumn TItem="Utilisateur" HeaderText="Ville" PropertyName="Ville">
+                @context.Ville
+            </GridColumn>
+            <GridColumn TItem="Utilisateur" HeaderText="Pays" PropertyName="Pays">
+                @context.Pays
+            </GridColumn>
+
+            @* <GridColumn TItem="Utilisateur" HeaderText="Actions"> *@
+            @*     <Template> *@
+            @*         <NavLink href="@($"/editUser/{context.UtilisateurId}")" ButtonType="ButtonType.Primary">Edit</NavLink> *@
+            @*     </Template> *@
+            @* </GridColumn> *@
+        </GridColumns>
+    </Grid>
 }
 
 @code {
-    private List<Utilisateur> utilisateurs;
+    private List<Utilisateur> utilisateurs = new List<Utilisateur>();
+    [Inject] private NavigationManager Navigation { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
         utilisateurs = await UtilisateurService.GetAllAsync("Utilisateurs");
+    }
+
+    private async Task<GridDataProviderResult<Utilisateur>> GetAllUsersData(GridDataProviderRequest<Utilisateur> request)
+    {
+        if (utilisateurs is null)
+        {
+            utilisateurs = await UtilisateurService.GetAllAsync("Utilisateurs");
+        }
+
+        return await Task.FromResult(request.ApplyTo(utilisateurs));
+    }
+
+    private void NavigateToEditUser(GridRowEventArgs<Utilisateur> args)
+    {
+        Console.WriteLine( $"Navigating to edit user {args.Item.UtilisateurId}");
+        Navigation.NavigateTo($"/editUser/{args.Item.UtilisateurId}");
     }
 
 }

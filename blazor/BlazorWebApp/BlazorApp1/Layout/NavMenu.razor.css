@@ -47,6 +47,7 @@
         height: 3rem;
         display: flex;
         align-items: center;
+        padding: 1rem;
     }
 
 .nav-item ::deep a.active {
