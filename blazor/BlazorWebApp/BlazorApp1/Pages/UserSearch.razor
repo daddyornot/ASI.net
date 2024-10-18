@@ -1,8 +1,76 @@
 ﻿@page "/userSearch"
+@using System.ComponentModel.DataAnnotations
+@using BlazorApp1.Models
+@using BlazorApp1.Services
+@inject IService<Utilisateur> UtilisateurService
+
 <h3>Rechercher un utilisateur</h3>
 
-<p>Rechercher un utilisateur</p>
+<EditForm Model="_SearchQuery" OnSubmit="Search">
+    <DataAnnotationsValidator />
+    <div class="d-flex flex-row justify-content-evenly">
+        <div class="form-group">
+            <InputText id="search" class="form-control" placeholder="Rechercher un mail utilisateur" @bind-Value="_SearchQuery.Email"/>
+            <ValidationMessage For="@(() => _SearchQuery.Email)"/>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">
+                Rechercher le mail
+            </button>
+        </div>
+    </div>
+</EditForm>
+
+<br/>
+
+@if (Model?.Mail == null)
+{
+    <h4>Aucun utilisateur trouvé..</h4>
+}
+else
+{
+    <UserForm Model="Model" OnSubmit="Submit" ButtonText="Modifier l'utilisateur"/>
+}
 
 @code {
-    
+    private Utilisateur Model { get; set; } = new Utilisateur();
+
+    private SearchQuery _SearchQuery { get; set; } = new SearchQuery();
+
+    private async void Search()
+    {
+        Console.WriteLine("Recherche de l'utilisateur : " + _SearchQuery.Email);
+        var user = await UtilisateurService.GetByStringAsync("Utilisateurs/GetByEmail", _SearchQuery.Email);
+        if (user != null)
+        {
+            Console.WriteLine("Utilisateur trouvé");
+            Model = user;
+        }
+        else
+        {
+            Console.WriteLine("Utilisateur non trouvé");
+        }
+    }
+
+    private async void Submit()
+    {
+        if (await UtilisateurService.PutAsync("Utilisateurs", Model.UtilisateurId, Model))
+        {
+            Console.WriteLine("Utilisateur modifié");
+        }
+        else
+        {
+            Console.WriteLine("Erreur lors de la modification de l'utilisateur");
+        }
+    }
+
+
+    private class SearchQuery
+    {
+        [Required(ErrorMessage = "Le champ est obligatoire")]
+        [EmailAddress(ErrorMessage = "Le champ doit etre un mail valide")]
+        public string? Email { get; set; }
+    }
+
+
 }

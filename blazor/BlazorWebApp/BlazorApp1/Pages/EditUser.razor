@@ -1,0 +1,41 @@
+﻿@page "/editUser/{id:int}"
+@using System.Security.Cryptography
+@using BlazorApp1.Models
+@using BlazorApp1.Services
+
+@inject IService<Utilisateur> UtilisateurService
+
+<h3>Editer un Utilisateur</h3>
+
+@if (Model?.Mail == null)
+{
+    <h3>Chargement de l'utilisateur n°@Id ...</h3>
+}
+else
+{
+    <UserForm Model="Model" OnSubmit="Submit" ButtonText="Modifier l'utilisateur"/>
+}
+
+
+@code {
+    [Parameter] public int Id { get; set; }
+    private Utilisateur Model { get; set; } = new Utilisateur();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Model = await UtilisateurService.GetByIdAsync("Utilisateurs/GetById", Id);
+    }
+
+    private async void Submit()
+    {
+        if (await UtilisateurService.PutAsync("Utilisateurs", Id, Model))
+        {
+            Console.WriteLine("Utilisateur modifié");
+        }
+        else
+        {
+            Console.WriteLine("Erreur lors de la modification de l'utilisateur");
+        }
+    }
+
+}

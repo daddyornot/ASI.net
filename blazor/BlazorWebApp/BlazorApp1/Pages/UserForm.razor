@@ -1,0 +1,85 @@
+﻿@using BlazorApp1.Models
+@inherits OwningComponentBase
+
+<EditForm Model="Model" OnSubmit="OnSubmit">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+
+    <div class="form-group">
+        <label for="Nom">Nom</label>
+        <InputText id="Nom" class="form-control" @bind-Value="Model.Nom"/>
+        <ValidationMessage For="@(() => Model.Nom)"/>
+    </div>
+
+    <div class="form-group">
+        <label for="Prenom">Prénom</label>
+        <InputText id="Prenom" class="form-control" @bind-Value="Model.Prenom"/>
+        <ValidationMessage For="@(() => Model.Prenom)"/>
+    </div>
+
+    <div class="form-group">
+        <label for="Mail">Mail</label>
+        <InputText id="Mail" class="form-control" @bind-Value="Model.Mail"/>
+        <ValidationMessage For="@(() => Model.Mail)"/>
+    </div>
+
+    <div class="form-group">
+        <label for="Mobile">Mobile</label>
+        <InputText id="Mobile" class="form-control" @bind-Value="Model.Mobile"/>
+        <ValidationMessage For="@(() => Model.Mobile)"/>
+    </div>
+
+    <div class="form-group">
+        <label for="Password">Password</label>
+        <InputText id="Password" class="form-control" @bind-Value="Model.Pwd"/>
+        <ValidationMessage For="@(() => Model.Pwd)"/>
+    </div>
+
+    <div class="form-group">
+        <label for="Rue">Rue</label>
+        <InputText id="Rue" class="form-control" @bind-Value="Model.Rue"/>
+        <ValidationMessage For="@(() => Model.Rue)"/>
+    </div>
+
+    <div class="form-group">
+        <label for="Cp">Code Postal</label>
+        <InputText id="cp" class="form-control" @bind-Value="Model.Cp"/>
+        <ValidationMessage For="@(() => Model.Cp)"/>
+    </div>
+
+    <div class="form-group">
+        <label for="Ville">Ville</label>
+        <InputText id="Ville" class="form-control" @bind-Value="Model.Ville"/>
+        <ValidationMessage For="@(() => Model.Ville)"/>
+    </div>
+
+    <div class="form-group">
+        <label for="Pays">Pays</label>
+        <InputText id="Pays" class="form-control" @bind-Value="Model.Pays"/>
+        <ValidationMessage For="@(() => Model.Pays)"/>
+    </div>
+
+    <div class="form-group">
+        <label for="Lat">Latitude</label>
+        <InputNumber id="Lat" class="form-control" @bind-Value="Model.Lat"/>
+        <ValidationMessage For="@(() => Model.Lat)"/>
+    </div>
+
+    <div class="form-group">
+        <label for="Lon">Longitude</label>
+        <InputNumber id="Lon" class="form-control" @bind-Value="Model.Long"/>
+        <ValidationMessage For="@(() => Model.Long)"/>
+    </div>
+
+    <div class="form-group mt-2">
+        <button type="submit" class="btn btn-primary">
+            @ButtonText
+        </button>
+    </div>
+</EditForm>
+
+@code {
+    [Parameter] public Utilisateur Model { get; set; } = new Utilisateur();
+    [Parameter] public EventCallback OnSubmit { get; set; }
+    [Parameter] public string ButtonText { get; set; } = "Submit";
+}

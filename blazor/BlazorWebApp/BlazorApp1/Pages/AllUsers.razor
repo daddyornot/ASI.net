@@ -10,29 +10,35 @@
 
 @if (utilisateurs == null)
 {
-    <p><em>Loading...</em></p>
+    <p>
+        <em>Loading...</em>
+    </p>
 }
 else
 {
     <table class="table">
         <thead>
-            <tr>
-                <th>Nom</th>
-                <th>Prénom</th>
-                <th>Mail</th>
-                <th>Mobile</th>
-            </tr>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Mail</th>
+            <th>Mobile</th>
+            <th>Actions</th>
+        </tr>
         </thead>
         <tbody>
-            @foreach (var user in utilisateurs)
-            {
-                <tr>
-                    <td>@user.Nom</td>
-                    <td>@user.Prenom</td>
-                    <td>@user.Mail</td>
-                    <td>@user.Mobile</td>
-                </tr>
-            }
+        @foreach (var user in utilisateurs)
+        {
+            <tr>
+                <td>@user.Nom</td>
+                <td>@user.Prenom</td>
+                <td>@user.Mail</td>
+                <td>@user.Mobile</td>
+                <td>
+                    <a href="/editUser/@user.UtilisateurId">Editer</a>
+                </td>
+            </tr>
+        }
         </tbody>
     </table>
 }
@@ -42,7 +48,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        utilisateurs = await UtilisateurService.GetAllAsync("api/Utilisateurs");
+        utilisateurs = await UtilisateurService.GetAllAsync("Utilisateurs");
     }
 
 }

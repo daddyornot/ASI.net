@@ -4,14 +4,14 @@ using BlazorApp1.Models;
 
 namespace BlazorApp1.Services;
 
-public class WSServiceUtilisateur: IService<Utilisateur>
+public class WSServiceUtilisateur : IService<Utilisateur>
 {
     private readonly HttpClient _httpClient;
 
     public WSServiceUtilisateur()
     {
         _httpClient = new HttpClient();
-        _httpClient.BaseAddress = new Uri("http://localhost:5074/");
+        _httpClient.BaseAddress = new Uri("http://localhost:5074/api/");
         _httpClient.DefaultRequestHeaders.Accept.Clear();
         _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
     }
@@ -29,14 +29,30 @@ public class WSServiceUtilisateur: IService<Utilisateur>
         }
     }
 
-    public Task<Utilisateur?> GetByIdAsync(string? nomControleur, int? id)
+    public async Task<Utilisateur?> GetByIdAsync(string? nomControleur, int? id)
     {
-        throw new NotImplementedException();
+        try
+        {
+            return await _httpClient.GetFromJsonAsync<Utilisateur>(nomControleur + "/" + id);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return null;
+        }
     }
 
-    public Task<Utilisateur?> GetByStringAsync(string? nomControleur, string? str)
+    public async Task<Utilisateur?> GetByStringAsync(string? nomControleur, string? str)
     {
-        throw new NotImplementedException();
+        try
+        {
+            return await _httpClient.GetFromJsonAsync<Utilisateur>(nomControleur + "/" + str);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return null;
+        }
     }
 
     public Task<bool> PostAsync(string? nomControleur, Utilisateur? entity)
@@ -45,7 +61,6 @@ public class WSServiceUtilisateur: IService<Utilisateur>
         {
             var response = _httpClient.PostAsJsonAsync(nomControleur, entity).Result;
             return Task.FromResult(response.IsSuccessStatusCode);
-
         }
         catch (Exception e)
         {
@@ -56,7 +71,16 @@ public class WSServiceUtilisateur: IService<Utilisateur>
 
     public Task<bool> PutAsync(string? nomControleur, int? id, Utilisateur? entity)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var response = _httpClient.PutAsJsonAsync(nomControleur + "/" + id, entity).Result;
+            return Task.FromResult(response.IsSuccessStatusCode);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return Task.FromResult(false);
+        }
     }
 
     public Task<bool> DeleteAsync(string? nomControleur, int? id)

@@ -7,91 +7,21 @@
 <h3>Ajouter un utilisateur</h3>
 
 
-<EditForm Model="Model" OnSubmit="Submit" FormName="AddUserForm">
-    <DataAnnotationsValidator/>
-    <ValidationSummary/>
-
-    <div class="form-group">
-        <label for="Nom">Nom</label>
-        <InputText id="Nom" class="form-control" @bind-Value="Model.Nom"/>
-        <ValidationMessage For="@(() => Model.Nom)"/>
-    </div>
-
-    <div class="form-group">
-        <label for="Prenom">Prénom</label>
-        <InputText id="Prenom" class="form-control" @bind-Value="Model.Prenom"/>
-        <ValidationMessage For="@(() => Model.Prenom)"/>
-    </div>
-
-    <div class="form-group">
-        <label for="Mail">Mail</label>
-        <InputText id="Mail" class="form-control" @bind-Value="Model.Mail"/>
-        <ValidationMessage For="@(() => Model.Mail)"/>
-    </div>
-    
-    <div class="form-group">
-        <label for="Mobile">Mobile</label>
-        <InputText id="Mobile" class="form-control" @bind-Value="Model.Mobile"/>
-        <ValidationMessage For="@(() => Model.Mobile)"/>
-    </div>
-    
-    <div class="form-group">
-        <label for="Password">Password</label>
-        <InputText id="Password" class="form-control" @bind-Value="Model.Pwd"/>
-        <ValidationMessage For="@(() => Model.Pwd)"/>
-    </div>
-
-    <div class="form-group">
-        <label for="Cp">Code Postal</label>
-        <InputText id="cp" class="form-control" @bind-Value="Model.Cp"/>
-        <ValidationMessage For="@(() => Model.Cp)"/>
-    </div>
-    
-    <div class="form-group">
-        <label for="Ville">Ville</label>
-        <InputText id="Ville" class="form-control" @bind-Value="Model.Ville"/>
-        <ValidationMessage For="@(() => Model.Ville)"/>
-    </div>
-    
-    <div class="form-group">
-        <label for="Rue">Rue</label>
-        <InputText id="Rue" class="form-control" @bind-Value="Model.Rue"/>
-        <ValidationMessage For="@(() => Model.Rue)"/>
-    </div>
-    
-    <div class="form-group">
-        <label for="Lat">Latitude</label>
-        <InputNumber id="Lat" class="form-control" @bind-Value="Model.Lat"/>
-        <ValidationMessage For="@(() => Model.Lat)"/>
-    </div>
-    
-    <div class="form-group">
-        <label for="Lon">Longitude</label>
-        <InputNumber id="Lon" class="form-control" @bind-Value="Model.Long"/>
-        <ValidationMessage For="@(() => Model.Long)"/>
-    </div>
-
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary">
-            Ajouter
-        </button>
-
-    </div>
-</EditForm>
+<UserForm Model="Model" OnSubmit="Submit" ButtonText="Ajouter un nouvel Utilisateur"></UserForm>
 
 @code {
-    [SupplyParameterFromForm] private Utilisateur? Model { get; set; }
+    [SupplyParameterFromForm] private Utilisateur? Model { get; set; } = new Utilisateur();
 
-    protected override void OnInitialized() => Model ??= new();
-    // print all values when submit
-    private void Submit()
+    private async void Submit()
     {
-        Console.WriteLine(Model.Nom);
-        Console.WriteLine(Model.Prenom);
-        Console.WriteLine(Model.Mail);
-            
-        
-        UtilisateurService.PostAsync("api/Utilisateurs", Model);
-        
+        if (await UtilisateurService.PostAsync("Utilisateurs", Model))
+        {
+            Console.WriteLine("Utilisateur ajouté");
+        }
+        else
+        {
+            Console.WriteLine("Erreur lors de l'ajout de l'utilisateur");
+        }
     }
+
 }
