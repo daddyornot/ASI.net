@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using Tp3Partie1.Models.DataManager;
 using Tp3Partie1.Models.EntityFramework;
+using Tp3Partie1.Models.Repository;
 
 namespace Tp3Partie1
 {
@@ -21,6 +23,9 @@ namespace Tp3Partie1
                 .AddDbContext<SeriesDbContext>(options =>
                     options.UseNpgsql(builder.Configuration.GetConnectionString("SeriesDbContext"))
                 );
+            
+            // Add Repository
+            builder.Services.AddScoped<IDataRepository<Utilisateur>, UtilisateurManager>();
             
             var app = builder.Build();
 

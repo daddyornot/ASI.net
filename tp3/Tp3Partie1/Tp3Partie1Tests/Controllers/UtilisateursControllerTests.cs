@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Tp3Partie1.Models.DataManager;
 using Tp3Partie1.Models.EntityFramework;
+using Tp3Partie1.Models.Repository;
 
 namespace Tp3Partie1.Controllers.Tests
 {
@@ -17,13 +19,14 @@ namespace Tp3Partie1.Controllers.Tests
     public class UtilisateursControllerTests
     {
         private readonly SeriesDbContext _context;
+        private IDataRepository<Utilisateur> _dataRepository;
         private UtilisateursController _controller;
 
-        [TestInitialize]
-        public void Initialize()
-        {
-            _controller = new UtilisateursController(_context);
-        }
+        // [TestInitialize]
+        // public void Initialize()
+        // {
+        //     _controller = new UtilisateursController(_context);
+        // }
 
         public UtilisateursControllerTests()
         {
@@ -31,6 +34,8 @@ namespace Tp3Partie1.Controllers.Tests
                 new DbContextOptionsBuilder<SeriesDbContext>().UseNpgsql(
                     "Server=localhost;port=5432;Database=postgres; uid=postgres; password=postgres;");
             _context = new SeriesDbContext(builder.Options);
+            _dataRepository = new UtilisateurManager(_context);
+            _controller = new UtilisateursController(_dataRepository);
         }
 
         // ---------------------------- GET UTILISATEURS ----------------------------

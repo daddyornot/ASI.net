@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Tp3Partie1.Models.DataManager;
 using Tp3Partie1.Models.EntityFramework;
+using Tp3Partie1.Models.Repository;
 
 namespace Tp3Partie1.Controllers
 {
@@ -12,11 +14,12 @@ namespace Tp3Partie1.Controllers
     [ApiController]
     public class UtilisateursController : ControllerBase
     {
-        private readonly SeriesDbContext _context;
+        // private readonly SeriesDbContext _context;
+        private readonly IDataRepository<Utilisateur> _dataRepository;
 
-        public UtilisateursController(SeriesDbContext context)
+        public UtilisateursController(IDataRepository<Utilisateur> dataRepository)
         {
-            _context = context;
+            _dataRepository = dataRepository;
         }
 
         /// <summary>
@@ -28,7 +31,8 @@ namespace Tp3Partie1.Controllers
         [ProducesResponseType<List<Utilisateur>>(StatusCodes.Status200OK)]
         public async Task<ActionResult<IEnumerable<Utilisateur>>> GetUtilisateurs()
         {
-            return await _context.Utilisateurs.ToListAsync();
+            // return await _context.Utilisateurs.ToListAsync();
+            return _dataRepository.GetAll();
         }
 
         /// <summary>
@@ -45,7 +49,8 @@ namespace Tp3Partie1.Controllers
         [ActionName("GetById")]
         public async Task<ActionResult<Utilisateur>> GetUtilisateurById(int id)
         {
-            var utilisateur = await _context.Utilisateurs.FindAsync(id);
+            // var utilisateur = await _context.Utilisateurs.FindAsync(id);
+            var utilisateur = _dataRepository.GetById(id);
 
             if (utilisateur == null)
             {
@@ -70,8 +75,8 @@ namespace Tp3Partie1.Controllers
         [ActionName("GetByEmail")]
         public async Task<ActionResult<Utilisateur>> GetUtilisateurByEmail(string email)
         {
-            var utilisateur = await _context.Utilisateurs.FirstOrDefaultAsync(u => u.Mail.ToLower() == email.ToLower());
-
+            // var utilisateur = await _context.Utilisateurs.FirstOrDefaultAsync(u => u.Mail.ToLower() == email.ToLower());
+            var utilisateur = await _dataRepository.GetByStringAsync(email);
             if (utilisateur == null)
             {
                 return NotFound("Utilisateur non trouvé");
@@ -106,23 +111,16 @@ namespace Tp3Partie1.Controllers
                 return BadRequest("L'id de l'utilisateur ne correspond pas");
             }
 
-            _context.Entry(utilisateur).State = EntityState.Modified;
-
-            try
+            var userToUpdate = _dataRepository.GetById(id);
+            if (userToUpdate == null)
             {
-                await _context.SaveChangesAsync();
+                return NotFound();
             }
-            catch (DbUpdateConcurrencyException)
+            else
             {
-                if (!UtilisateurExists(id))
-                {
-                    return NotFound("Utilisateur non trouvé");
-                }
-
-                throw;
+                _dataRepository.Update(userToUpdate.Value, utilisateur);
+                return NoContent();
             }
-
-            return NoContent();
         }
 
         /// <summary>
@@ -143,57 +141,32 @@ namespace Tp3Partie1.Controllers
                 return BadRequest(ModelState);
             }
 
-            _context.Utilisateurs.Add(utilisateur);
-            await _context.SaveChangesAsync();
+            // _context.Utilisateurs.Add(utilisateur);
+            // await _context.SaveChangesAsync();
+            _dataRepository.Add(utilisateur);
 
-            return CreatedAtAction("GetUtilisateur", new { id = utilisateur.UtilisateurId }, utilisateur);
+            return CreatedAtAction("GetById", new { id = utilisateur.UtilisateurId }, utilisateur);
         }
-
-        [HttpPatch("{id}")]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> PatchUtilisateur(int id, JsonPatchDocument<Utilisateur> patchEntity)
-        {
-            var user = await _context.Utilisateurs.FirstOrDefaultAsync(u => u.UtilisateurId == id);
-            if (user == null)
-            {
-                return NotFound("Utilisateur non trouvé");
-            }
-            
-            patchEntity.ApplyTo(user, ModelState);
-
-            TryValidateModel(user);
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-            
-            await _context.SaveChangesAsync();
-            return new ObjectResult(user);
-
-        }
-
 
         // DELETE: api/Utilisateurs/5
-        // [HttpDelete("{id}")]
-        // public async Task<IActionResult> DeleteUtilisateur(int id)
-        // {
-        //     var utilisateur = await _context.Utilisateurs.FindAsync(id);
-        //     if (utilisateur == null)
-        //     {
-        //         return NotFound("Utilisateur non trouvé");
-        //     }
-        //
-        //     _context.Utilisateurs.Remove(utilisateur);
-        //     await _context.SaveChangesAsync();
-        //
-        //     return NoContent();
-        // }
-
-        private bool UtilisateurExists(int id)
+        [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> DeleteUtilisateur(int id)
         {
-            return _context.Utilisateurs.Any(e => e.UtilisateurId == id);
+            var utilisateur = _dataRepository.GetById(id);
+            if (utilisateur == null)
+            {
+                return NotFound();
+            }
+
+            _dataRepository.Delete(utilisateur.Value);
+            return NoContent();
         }
+
+        // private bool UtilisateurExists(int id)
+        // {
+        //     return _context.Utilisateurs.Any(e => e.UtilisateurId == id);
+        // }
     }
 }
