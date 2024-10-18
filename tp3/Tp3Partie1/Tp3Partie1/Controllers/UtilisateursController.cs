@@ -32,7 +32,7 @@ namespace Tp3Partie1.Controllers
         public async Task<ActionResult<IEnumerable<Utilisateur>>> GetUtilisateurs()
         {
             // return await _context.Utilisateurs.ToListAsync();
-            return _dataRepository.GetAll();
+            return await _dataRepository.GetAllAsync();
         }
 
         /// <summary>
@@ -50,9 +50,9 @@ namespace Tp3Partie1.Controllers
         public async Task<ActionResult<Utilisateur>> GetUtilisateurById(int id)
         {
             // var utilisateur = await _context.Utilisateurs.FindAsync(id);
-            var utilisateur = _dataRepository.GetById(id);
+            var utilisateur = await _dataRepository.GetByIdAsync(id);
 
-            if (utilisateur == null)
+            if (utilisateur.Value == null)
             {
                 return NotFound("Utilisateur non trouvé");
             }
@@ -77,7 +77,7 @@ namespace Tp3Partie1.Controllers
         {
             // var utilisateur = await _context.Utilisateurs.FirstOrDefaultAsync(u => u.Mail.ToLower() == email.ToLower());
             var utilisateur = await _dataRepository.GetByStringAsync(email);
-            if (utilisateur == null)
+            if (utilisateur.Value == null)
             {
                 return NotFound("Utilisateur non trouvé");
             }
@@ -111,16 +111,14 @@ namespace Tp3Partie1.Controllers
                 return BadRequest("L'id de l'utilisateur ne correspond pas");
             }
 
-            var userToUpdate = _dataRepository.GetById(id);
-            if (userToUpdate == null)
+            var userToUpdate = await _dataRepository.GetByIdAsync(id);
+            if (userToUpdate.Value == null)
             {
                 return NotFound();
             }
-            else
-            {
-                _dataRepository.Update(userToUpdate.Value, utilisateur);
-                return NoContent();
-            }
+
+            await _dataRepository.UpdateAsync(userToUpdate.Value, utilisateur);
+            return NoContent();
         }
 
         /// <summary>
@@ -143,7 +141,7 @@ namespace Tp3Partie1.Controllers
 
             // _context.Utilisateurs.Add(utilisateur);
             // await _context.SaveChangesAsync();
-            _dataRepository.Add(utilisateur);
+            await _dataRepository.AddAsync(utilisateur);
 
             return CreatedAtAction("GetById", new { id = utilisateur.UtilisateurId }, utilisateur);
         }
@@ -154,13 +152,13 @@ namespace Tp3Partie1.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> DeleteUtilisateur(int id)
         {
-            var utilisateur = _dataRepository.GetById(id);
-            if (utilisateur == null)
+            var utilisateur = await _dataRepository.GetByIdAsync(id);
+            if (utilisateur.Value == null)
             {
                 return NotFound();
             }
 
-            _dataRepository.Delete(utilisateur.Value);
+            await _dataRepository.DeleteAsync(utilisateur.Value);
             return NoContent();
         }
 

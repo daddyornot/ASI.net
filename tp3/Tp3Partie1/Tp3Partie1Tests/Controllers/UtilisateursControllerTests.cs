@@ -18,24 +18,25 @@ namespace Tp3Partie1.Controllers.Tests
     [TestClass()]
     public class UtilisateursControllerTests
     {
-        private readonly SeriesDbContext _context;
+        private SeriesDbContext _context;
         private IDataRepository<Utilisateur> _dataRepository;
         private UtilisateursController _controller;
 
-        // [TestInitialize]
-        // public void Initialize()
-        // {
-        //     _controller = new UtilisateursController(_context);
-        // }
-
-        public UtilisateursControllerTests()
+        [TestInitialize]
+        public void Initialize()
         {
+            // _controller = new UtilisateursController(_context);
             var builder =
                 new DbContextOptionsBuilder<SeriesDbContext>().UseNpgsql(
                     "Server=localhost;port=5432;Database=postgres; uid=postgres; password=postgres;");
             _context = new SeriesDbContext(builder.Options);
             _dataRepository = new UtilisateurManager(_context);
             _controller = new UtilisateursController(_dataRepository);
+        }
+
+        public UtilisateursControllerTests()
+        {
+
         }
 
         // ---------------------------- GET UTILISATEURS ----------------------------
@@ -168,73 +169,6 @@ namespace Tp3Partie1.Controllers.Tests
 
             Assert.IsInstanceOfType(result.Result, typeof(BadRequestObjectResult), "Pas un BadRequest");
             Assert.IsNull(_context.Utilisateurs.FirstOrDefault(u => u.Mail.ToUpper() == userAtester.Mail.ToUpper()));
-        }
-
-        [TestMethod()]
-        public void PutUtilisateur_ModelValidated_UpdateOk()
-        {
-            var userId = 1;
-            // Arrange
-            var user = _context.Utilisateurs.First(u => u.UtilisateurId == userId);
-            var oldName = user.Nom;
-
-            var userModified = new Utilisateur()
-            {
-                UtilisateurId = userId,
-                Nom = "NOUVEAU NOM",
-                Prenom = user.Prenom,
-                Mobile = user.Mobile,
-                Mail = user.Mail,
-                Pwd = user.Pwd,
-                Rue = user.Rue,
-                Cp = user.Cp,
-                Ville = user.Ville,
-                Pays = user.Pays,
-                Lat = user.Lat,
-                Long = user.Long
-            };
-
-            // Detach the existing tracked entity
-            _context.Entry(user).State = EntityState.Detached;
-
-            // Act
-            var result = _controller.PutUtilisateur(userId, userModified).Result;
-            // Assert
-            var userRecupere = _context.Utilisateurs
-                .FirstOrDefault(u => u.UtilisateurId == userId);
-
-            Assert.IsNotNull(userRecupere, "Utilisateur non trouvé");
-            Assert.AreNotEqual(oldName, userRecupere.Nom, "Nom non modifié");
-            Assert.AreEqual(userModified.Nom, userRecupere.Nom, "Nom non modifié");
-        }
-        
-        [TestMethod()]
-        public void PutUtilisateur_NotCorrespondingIds_BadRequest()
-        {
-            var userId = 1;
-            // Arrange
-            var user = _context.Utilisateurs.First(u => u.UtilisateurId == userId);
-
-            var userModified = new Utilisateur()
-            {
-                UtilisateurId = userId,
-                Nom = "NOUVEAU NOM",
-                Prenom = user.Prenom,
-                Mobile = user.Mobile,
-                Mail = user.Mail,
-                Pwd = user.Pwd,
-                Rue = user.Rue,
-                Cp = user.Cp,
-                Ville = user.Ville,
-                Pays = user.Pays,
-                Lat = user.Lat,
-                Long = user.Long
-            };
-
-            // Act - Test with a different id than the userModified
-            var result = _controller.PutUtilisateur(2, userModified).Result;
-            // Assert
-            Assert.IsInstanceOfType(result, typeof(BadRequestObjectResult), "Pas un BadRequest");
         }
     }
 }

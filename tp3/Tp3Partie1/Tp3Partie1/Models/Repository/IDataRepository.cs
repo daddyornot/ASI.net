@@ -4,8 +4,8 @@ namespace Tp3Partie1.Models.Repository;
 
 public interface IDataRepository<TEntity>
 {
-    ActionResult<IEnumerable<TEntity>> GetAll();
-    ActionResult<TEntity> GetById(int id);
+    Task<ActionResult<IEnumerable<TEntity>>> GetAllAsync();
+    Task<ActionResult<TEntity>> GetByIdAsync(int id);
     // ActionResult<TEntity> GetByString(string str);
     Task<ActionResult<TEntity>> GetByStringAsync(string str);
     Task AddAsync(TEntity entity);

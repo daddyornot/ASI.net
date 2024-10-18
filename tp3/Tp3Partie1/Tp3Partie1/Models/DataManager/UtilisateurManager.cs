@@ -18,14 +18,14 @@ public class UtilisateurManager : IDataRepository<Utilisateur>
         seriesDbContext = context;
     }
 
-    public ActionResult<IEnumerable<Utilisateur>> GetAll()
+    public async Task<ActionResult<IEnumerable<Utilisateur>>> GetAllAsync()
     {
-        return seriesDbContext.Utilisateurs.ToList();
+        return await seriesDbContext.Utilisateurs.ToListAsync();
     }
 
-    public ActionResult<Utilisateur> GetById(int id)
+    public async Task<ActionResult<Utilisateur>> GetByIdAsync(int id)
     {
-        return seriesDbContext.Utilisateurs.FirstOrDefault(u => u.UtilisateurId == id);
+        return await seriesDbContext.Utilisateurs.FirstOrDefaultAsync(u => u.UtilisateurId == id);
     }
 
     public async Task<ActionResult<Utilisateur>> GetByStringAsync(string mail)
