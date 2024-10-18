@@ -9,7 +9,20 @@ namespace Tp3Partie1
     {
         public static void Main(string[] args)
         {
+            var myAllowSpecificOrigins = "_myAllowSpecificOrigins";
             var builder = WebApplication.CreateBuilder(args);
+
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(name: myAllowSpecificOrigins,
+                    policy =>
+                    {
+                        policy.WithOrigins("http://localhost:5101")
+                            .AllowAnyHeader()
+                            .AllowAnyMethod();
+                    });
+            });
 
             // Add services to the container.
 
@@ -23,10 +36,10 @@ namespace Tp3Partie1
                 .AddDbContext<SeriesDbContext>(options =>
                     options.UseNpgsql(builder.Configuration.GetConnectionString("SeriesDbContext"))
                 );
-            
+
             // Add Repository
             builder.Services.AddScoped<IDataRepository<Utilisateur>, UtilisateurManager>();
-            
+
             var app = builder.Build();
 
             using (var scope = app.Services.CreateScope())
@@ -36,7 +49,7 @@ namespace Tp3Partie1
                 context.Database.EnsureCreated();
                 // DbInitializer.Initialize(context);
             }
-            
+
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
@@ -45,9 +58,9 @@ namespace Tp3Partie1
             }
 
             app.UseHttpsRedirection();
+            app.UseCors(myAllowSpecificOrigins);
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
