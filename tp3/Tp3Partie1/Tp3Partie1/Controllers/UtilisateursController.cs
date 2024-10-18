@@ -52,7 +52,7 @@ namespace Tp3Partie1.Controllers
             // var utilisateur = await _context.Utilisateurs.FindAsync(id);
             var utilisateur = await _dataRepository.GetByIdAsync(id);
 
-            if (utilisateur.Value == null)
+            if (utilisateur == null)
             {
                 return NotFound("Utilisateur non trouvé");
             }
@@ -77,7 +77,7 @@ namespace Tp3Partie1.Controllers
         {
             // var utilisateur = await _context.Utilisateurs.FirstOrDefaultAsync(u => u.Mail.ToLower() == email.ToLower());
             var utilisateur = await _dataRepository.GetByStringAsync(email);
-            if (utilisateur.Value == null)
+            if (utilisateur == null)
             {
                 return NotFound("Utilisateur non trouvé");
             }
@@ -112,7 +112,7 @@ namespace Tp3Partie1.Controllers
             }
 
             var userToUpdate = await _dataRepository.GetByIdAsync(id);
-            if (userToUpdate.Value == null)
+            if (userToUpdate == null)
             {
                 return NotFound();
             }
@@ -153,7 +153,7 @@ namespace Tp3Partie1.Controllers
         public async Task<IActionResult> DeleteUtilisateur(int id)
         {
             var utilisateur = await _dataRepository.GetByIdAsync(id);
-            if (utilisateur.Value == null)
+            if (utilisateur == null)
             {
                 return NotFound();
             }
