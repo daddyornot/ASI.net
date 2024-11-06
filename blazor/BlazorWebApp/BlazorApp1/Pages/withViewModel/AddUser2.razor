@@ -1,0 +1,16 @@
+﻿@page "/addUser2"
+@using BlazorApp1.Components
+@using BlazorApp1.ViewModel
+
+@inject AddUserViewModel ViewModel
+
+<h3>Ajouter un utilisateur</h3>
+
+<UserForm Model="ViewModel.Model" OnSubmit="Submit" ButtonText="Ajouter un nouvel Utilisateur"></UserForm>
+
+@code {
+    private async Task Submit()
+    {
+        await ViewModel.Submit();
+    }
+}

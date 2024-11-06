@@ -1,0 +1,47 @@
+﻿@page "/userSearch2"
+@using BlazorApp1.Components
+@using BlazorApp1.ViewModel
+
+@inject UserSearchViewModel ViewModel
+
+<h3>Rechercher un utilisateur</h3>
+
+<EditForm Model="ViewModel._SearchQuery" OnSubmit="Search">
+    <DataAnnotationsValidator/>
+    <div class="d-flex flex-row justify-content-evenly">
+        <div class="form-group">
+            <InputText id="search" class="form-control" placeholder="Rechercher un mail utilisateur" @bind-Value="ViewModel._SearchQuery.Email"/>
+            <ValidationMessage For="@(() => ViewModel._SearchQuery.Email)"/>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">
+                Rechercher le mail
+            </button>
+        </div>
+    </div>
+</EditForm>
+
+<br/>
+
+@if (ViewModel.Model?.Mail == null)
+{
+    <h4>Aucun utilisateur trouvé..</h4>
+}
+else
+{
+    <UserForm Model="ViewModel.Model" OnSubmit="Submit" ButtonText="Modifier l'utilisateur"/>
+}
+
+@code {
+
+    private async Task Search()
+    {
+        await ViewModel.Search();
+    }
+
+    private async Task Submit()
+    {
+        await ViewModel.Submit();
+    }
+
+}

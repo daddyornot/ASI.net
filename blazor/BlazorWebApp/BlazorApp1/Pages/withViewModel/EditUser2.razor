@@ -1,0 +1,30 @@
+﻿@page "/editUser2/{id:int}"
+@using BlazorApp1.Components
+@using BlazorApp1.ViewModel
+
+@inject EditUserViewModel ViewModel
+
+<h3>Editer un Utilisateur</h3>
+
+@if (ViewModel.LoadUserCommand.IsRunning)
+{
+    <h3>Chargement de l'utilisateur n°@Id ...</h3>
+}
+else
+{
+    <UserForm Model="ViewModel.Model" OnSubmit="Submit" ButtonText="Modifier l'utilisateur"/>
+}
+
+@code {
+    [Parameter] public int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await ViewModel.LoadUser(Id);
+    }
+
+    private async Task Submit()
+    {
+        await ViewModel.SubmitChanges(Id);
+    }
+}

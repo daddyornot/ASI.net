@@ -10,6 +10,7 @@ public partial class Utilisateur
 
     public string? Prenom { get; set; }
 
+    [RegularExpression(@"^0[0-9]{9}$", ErrorMessage = "Le numéro de téléphone doit commencer par 0 et contenir 10 chiffres")]
     public string? Mobile { get; set; }
 
     [StringLength(100, MinimumLength = 6,
@@ -30,6 +31,7 @@ public partial class Utilisateur
     [StringLength(200, ErrorMessage = "Le champ doit contenir moins de 200 caractères")]
     public string? Rue { get; set; }
 
+    [StringLength(5, ErrorMessage = "Le champ doit contenir 5 caractères")]
     public string? Cp { get; set; }
 
     [StringLength(50, ErrorMessage = "Le champ doit contenir moins de 50 caractères")] 

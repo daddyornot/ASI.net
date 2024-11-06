@@ -17,6 +17,9 @@ namespace BlazorApp1
             // builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
             builder.Services.AddScoped<IService<Utilisateur>, WSServiceUtilisateur>();
             builder.Services.AddScoped<AllUsersViewModel>();
+            builder.Services.AddScoped<AddUserViewModel>();
+            builder.Services.AddScoped<EditUserViewModel>();
+            builder.Services.AddScoped<UserSearchViewModel>();
             builder.Services.AddBlazorBootstrap(); 
 
             await builder.Build().RunAsync();

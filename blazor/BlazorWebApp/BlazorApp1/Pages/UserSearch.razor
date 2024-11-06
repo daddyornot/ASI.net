@@ -2,12 +2,13 @@
 @using System.ComponentModel.DataAnnotations
 @using BlazorApp1.Models
 @using BlazorApp1.Services
+@using BlazorApp1.Components
 @inject IService<Utilisateur> UtilisateurService
 
 <h3>Rechercher un utilisateur</h3>
 
 <EditForm Model="_SearchQuery" OnSubmit="Search">
-    <DataAnnotationsValidator />
+    <DataAnnotationsValidator/>
     <div class="d-flex flex-row justify-content-evenly">
         <div class="form-group">
             <InputText id="search" class="form-control" placeholder="Rechercher un mail utilisateur" @bind-Value="_SearchQuery.Email"/>
@@ -49,12 +50,17 @@ else
         else
         {
             Console.WriteLine("Utilisateur non trouvé");
+            Model = null;
         }
+
+        StateHasChanged();
     }
 
     private async void Submit()
     {
-        if (await UtilisateurService.PutAsync("Utilisateurs", Model.UtilisateurId, Model))
+        var response = await UtilisateurService.PutAsync("Utilisateurs", Model.UtilisateurId, Model);
+        Console.WriteLine(response);
+        if (response)
         {
             Console.WriteLine("Utilisateur modifié");
             ToastService.Notify(new(ToastType.Success, "Succès !", "Utilisateur modifié"));

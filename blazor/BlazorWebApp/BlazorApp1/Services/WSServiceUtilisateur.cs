@@ -55,31 +55,36 @@ public class WSServiceUtilisateur : IService<Utilisateur>
         }
     }
 
-    public Task<bool> PostAsync(string? nomControleur, Utilisateur? entity)
+    public async Task<bool> PostAsync(string? nomControleur, Utilisateur? entity)
     {
         try
         {
-            var response = _httpClient.PostAsJsonAsync(nomControleur, entity).Result;
-            return Task.FromResult(response.IsSuccessStatusCode);
+            var response = await _httpClient.PostAsJsonAsync(nomControleur, entity);
+            return response.IsSuccessStatusCode;
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
-            return Task.FromResult(false);
+            return false;
         }
     }
 
-    public Task<bool> PutAsync(string? nomControleur, int? id, Utilisateur? entity)
+    public async Task<bool> PutAsync(string? nomControleur, int? id, Utilisateur? entity)
     {
+        if (id == null)
+        {
+            throw new ArgumentNullException(nameof(id));
+        }
+
         try
         {
-            var response = _httpClient.PutAsJsonAsync(nomControleur + "/" + id, entity).Result;
-            return Task.FromResult(response.IsSuccessStatusCode);
+            var response = await _httpClient.PutAsJsonAsync(nomControleur + "/" + id, entity);
+            return response.IsSuccessStatusCode;
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
-            return Task.FromResult(false);
+            return false;
         }
     }
 

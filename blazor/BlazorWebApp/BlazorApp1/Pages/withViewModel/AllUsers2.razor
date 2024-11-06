@@ -1,8 +1,6 @@
 ﻿@page "/users2"
 @using BlazorApp1.Models
-@using BlazorApp1.Services
 @using BlazorApp1.ViewModel
-@using BlazorBootstrap
 
 @inject AllUsersViewModel ViewModel
 
@@ -24,7 +22,7 @@ else
           AllowPaging="true"
           Responsive="true"
           Class="table table-hover table-bordered table-striped"
-          OnRowClick="NavigateToEditUser">
+          >
         <GridColumns >
             <GridColumn TItem="Utilisateur" HeaderText="Nom" PropertyName="Nom">
                 @context.Nom
@@ -44,47 +42,38 @@ else
             <GridColumn TItem="Utilisateur" HeaderText="Pays" PropertyName="Pays">
                 @context.Pays
             </GridColumn>
-
-            @* <GridColumn TItem="Utilisateur" HeaderText="Actions"> *@
-            @*     <Template> *@
-            @*         <NavLink href="@($"/editUser/{context.UtilisateurId}")" ButtonType="ButtonType.Primary">Edit</NavLink> *@
-            @*     </Template> *@
-            @* </GridColumn> *@
+            <GridColumn TItem="Utilisateur" HeaderText="Actions">
+                <button class="btn btn-primary" @onclick="() => NavigateToEditUser(new GridRowEventArgs<Utilisateur>(context))">
+                    Edit
+                </button>
+            </GridColumn>
         </GridColumns>
     </Grid>
 }
 
 @code {
-    private List<Utilisateur> utilisateurs = new List<Utilisateur>();
     [Inject] private NavigationManager Navigation { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
         await ViewModel.LoadUsersCommand.ExecuteAsync(null);
-        utilisateurs = ViewModel.Utilisateurs;
     }
 
     private async Task<GridDataProviderResult<Utilisateur>> GetAllUsersData(GridDataProviderRequest<Utilisateur> request)
     {
-        if (utilisateurs is null)
+        if (ViewModel.Utilisateurs is null)
         {
             await ViewModel.LoadUsersCommand.ExecuteAsync(null);
-            utilisateurs = ViewModel.Utilisateurs;
+            ViewModel.Utilisateurs = ViewModel.Utilisateurs;
         }
 
-        return await Task.FromResult(request.ApplyTo(utilisateurs));
-    }
-
-    private async Task Reload()
-    {
-        await ViewModel.LoadUsersCommand.ExecuteAsync(null);
-        utilisateurs = ViewModel.Utilisateurs;
+        return await Task.FromResult(request.ApplyTo(ViewModel.Utilisateurs));
     }
 
     private void NavigateToEditUser(GridRowEventArgs<Utilisateur> args)
     {
         Console.WriteLine($"Navigating to edit user {args.Item.UtilisateurId}");
-        Navigation.NavigateTo($"/editUser/{args.Item.UtilisateurId}");
+        Navigation.NavigateTo($"/editUser2/{args.Item.UtilisateurId}");
     }
 
 }
